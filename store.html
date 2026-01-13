@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Store - Mafu Secondary School</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/store.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo-container">
+                <div class="logo">MS</div>
+                <div class="school-name">
+                    <h1>Mafu Secondary School</h1>
+                    <h2>Excellence in Education Since 1995</h2>
+                </div>
+            </div>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav>
+                <ul id="mainMenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="team.html">Our Team</a></li>
+                    <li><a href="announcement.html">Announcements</a></li>
+                    <li><a href="marketing.html">Admissions</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">Resources <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-content">
+                            <a href="donation.html">Matric Support</a>
+                            <a href="store.html" class="active">School Store</a>
+                            <a href="top-learners.html">Top Learners</a>
+                            <a href="#">Learning Materials</a>
+                            <a href="#">Timetables</a>
+                            <a href="#">Grades Portal</a>
+                        </div>
+                    </li>
+                    <li><a href="login.html" class="login-nav-btn">Login <i class="fas fa-sign-in-alt"></i></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Store Hero -->
+    <section class="store-hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Mafu School Store</h1>
+                <p class="hero-subtitle">Official Uniforms, Supplies & Merchandise</p>
+                <p class="hero-description">Shop authentic Mafu Secondary School uniforms, stationery, and branded merchandise. All proceeds support school programs.</p>
+                <div class="hero-features">
+                    <div class="feature">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Official Products</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-truck"></i>
+                        <span>Free Delivery (Over R500)</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-undo"></i>
+                        <span>Easy Returns</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-credit-card"></i>
+                        <span>Secure Payment</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Store Navigation -->
+    <section class="store-navigation">
+        <div class="container">
+            <div class="nav-container">
+                <div class="store-categories">
+                    <button class="category-btn active" data-category="all">
+                        <i class="fas fa-th-large"></i> All Products
+                    </button>
+                    <button class="category-btn" data-category="uniforms">
+                        <i class="fas fa-tshirt"></i> Uniforms
+                    </button>
+                    <button class="category-btn" data-category="stationery">
+                        <i class="fas fa-pencil-alt"></i> Stationery
+                    </button>
+                    <button class="category-btn" data-category="sports">
+                        <i class="fas fa-football-ball"></i> Sports Gear
+                    </button>
+                    <button class="category-btn" data-category="merchandise">
+                        <i class="fas fa-shopping-bag"></i> Merchandise
+                    </button>
+                    <button class="category-btn" data-category="books">
+                        <i class="fas fa-book"></i> Books
+                    </button>
+                </div>
+                
+                <div class="store-controls">
+                    <div class="search-box">
+                        <input type="text" id="storeSearch" placeholder="Search products...">
+                        <button class="search-btn">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                    <div class="filter-controls">
+                        <select id="sortBy">
+                            <option value="featured">Featured</option>
+                            <option value="price-low">Price: Low to High</option>
+                            <option value="price-high">Price: High to Low</option>
+                            <option value="name">Name A-Z</option>
+                            <option value="popular">Most Popular</option>
+                        </select>
+                        <button class="filter-btn" id="filterToggle">
+                            <i class="fas fa-filter"></i> Filter
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Filter Panel -->
+            <div class="filter-panel" id="filterPanel">
+                <div class="filter-section">
+                    <h4>Price Range</h4>
+                    <div class="price-range">
+                        <input type="range" id="priceRange" min="0" max="1000" value="1000">
+                        <div class="range-values">
+                            <span>R 0</span>
+                            <span id="maxPrice">R 1000</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="filter-section">
+                    <h4>Size</h4>
+                    <div class="size-filters">
+                        <label><input type="checkbox" name="size" value="xs"> XS</label>
+                        <label><input type="checkbox" name="size" value="s"> S</label>
+                        <label><input type="checkbox" name="size" value="m" checked> M</label>
+                        <label><input type="checkbox" name="size" value="l"> L</label>
+                        <label><input type="checkbox" name="size" value="xl"> XL</label>
+                    </div>
+                </div>
+                <div class="filter-section">
+                    <h4>Gender</h4>
+                    <div class="gender-filters">
+                        <label><input type="radio" name="gender" value="all" checked> All</label>
+                        <label><input type="radio" name="gender" value="boys"> Boys</label>
+                        <label><input type="radio" name="gender" value="girls"> Girls</label>
+                        <label><input type="radio" name="gender" value="unisex"> Unisex</label>
+                    </div>
+                </div>
+                <div class="filter-actions">
+                    <button class="apply-filters">Apply Filters</button>
+                    <button class="reset-filters">Reset</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Store Content -->
+    <main class="store-content">
+        <div class="container">
+            <div class="store-layout">
+                <!-- Products Grid -->
+                <section class="products-section">
+                    <div class="products-header">
+                        <h2 id="categoryTitle">All Products</h2>
+                        <div class="products-count">
+                            <span id="productCount">24</span> products
+                        </div>
+                    </div>
+                    
+                    <div class="products-grid" id="productsGrid">
+                        <!-- Product cards will be loaded by JavaScript -->
+                    </div>
+                    
+                    <div class="pagination">
+                        <button class="page-btn prev" disabled>
+                            <i class="fas fa-chevron-left"></i> Previous
+                        </button>
+                        <div class="page-numbers">
+                            <span class="page-number active">1</span>
+                            <span class="page-number">2</span>
+                            <span class="page-number">3</span>
+                            <span class="page-dots">...</span>
+                            <span class="page-number">5</span>
+                        </div>
+                        <button class="page-btn next">
+                            Next <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </section>
+                
+                <!-- Cart Sidebar -->
+                <aside class="cart-sidebar">
+                    <div class="cart-header">
+                        <h3>
+                            <i class="fas fa-shopping-cart"></i>
+                            Shopping Cart
+                            <span class="cart-count" id="cartCount">0</span>
+                        </h3>
+                        <button class="clear-cart" onclick="clearCart()">
+                            <i class="fas fa-trash"></i> Clear
+                        </button>
+                    </div>
+                    
+                    <div class="cart-items" id="cartItems">
+                        <div class="empty-cart">
+                            <i class="fas fa-shopping-basket"></i>
+                            <p>Your cart is empty</p>
+                            <p>Add items to get started</p>
+                        </div>
+                    </div>
+                    
+                    <div class="cart-summary">
+                        <div class="summary-row">
+                            <span>Subtotal</span>
+                            <span id="subtotal">R 0.00</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Delivery</span>
+                            <span id="delivery">R 0.00</span>
+                        </div>
+                        <div class="summary-row total">
+                            <span>Total</span>
+                            <span id="cartTotal">R 0.00</span>
+                        </div>
+                        
+                        <div class="delivery-info">
+                            <i class="fas fa-info-circle"></i>
+                            <span>Free delivery on orders over R500</span>
+                        </div>
+                        
+                        <button class="checkout-btn" onclick="openCheckout()">
+                            <i class="fas fa-lock"></i> Proceed to Checkout
+                        </button>
+                        
+                        <div class="payment-methods">
+                            <p>Secure payment with:</p>
+                            <div class="payment-icons">
+                                <i class="fab fa-cc-visa"></i>
+                                <i class="fab fa-cc-mastercard"></i>
+                                <i class="fab fa-cc-amex"></i>
+                                <i class="fas fa-university"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="promo-section">
+                        <h4>Have a Promo Code?</h4>
+                        <div class="promo-input">
+                            <input type="text" id="promoCode" placeholder="Enter code">
+                            <button class="apply-promo" onclick="applyPromo()">Apply</button>
+                        </div>
+                        <div class="active-promos" id="activePromos"></div>
+                    </div>
+                    
+                    <div class="quick-links">
+                        <h4>Quick Links</h4>
+                        <a href="#size-guide" class="quick-link">
+                            <i class="fas fa-ruler"></i> Size Guide
+                        </a>
+                        <a href="#delivery-info" class="quick-link">
+                            <i class="fas fa-truck"></i> Delivery Info
+                        </a>
+                        <a href="#returns" class="quick-link">
+                            <i class="fas fa-undo"></i> Returns Policy
+                        </a>
+                        <a href="#faq" class="quick-link">
+                            <i class="fas fa-question-circle"></i> FAQ
+                        </a>
+                    </div>
+                </aside>
+            </div>
+            
+            <!-- Featured Products -->
+            <section class="featured-products">
+                <div class="section-header">
+                    <h2>Featured Products</h2>
+                    <a href="#" class="view-all">View All <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="featured-grid" id="featuredGrid">
+                    <!-- Featured products will be loaded by JavaScript -->
+                </div>
+            </section>
+            
+            <!-- Categories Showcase -->
+            <section class="categories-showcase">
+                <h2>Shop by Category</h2>
+                <div class="categories-grid">
+                    <div class="category-card uniforms">
+                        <div class="category-image">
+                            <i class="fas fa-tshirt"></i>
+                        </div>
+                        <div class="category-content">
+                            <h3>Uniforms</h3>
+                            <p>Complete school uniform sets</p>
+                            <span class="item-count">15 items</span>
+                        </div>
+                    </div>
+                    <div class="category-card stationery">
+                        <div class="category-image">
+                            <i class="fas fa-pencil-alt"></i>
+                        </div>
+                        <div class="category-content">
+                            <h3>Stationery</h3>
+                            <p>Essential school supplies</p>
+                            <span class="item-count">32 items</span>
+                        </div>
+                    </div>
+                    <div class="category-card sports">
+                        <div class="category-image">
+                            <i class="fas fa-football-ball"></i>
+                        </div>
+                        <div class="category-content">
+                            <h3>Sports Gear</h3>
+                            <p>Team uniforms & equipment</p>
+                            <span class="item-count">18 items</span>
+                        </div>
+                    </div>
+                    <div class="category-card merchandise">
+                        <div class="category-image">
+                            <i class="fas fa-shopping-bag"></i>
+                        </div>
+                        <div class="category-content">
+                            <h3>Merchandise</h3>
+                            <p>Branded school items</p>
+                            <span class="item-count">24 items</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Size Guide -->
+            <section class="size-guide" id="size-guide">
+                <h2>Uniform Size Guide</h2>
+                <div class="size-guide-content">
+                    <div class="guide-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Size</th>
+                                    <th>Chest (cm)</th>
+                                    <th>Waist (cm)</th>
+                                    <th>Height (cm)</th>
+                                    <th>Age Guide</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>XS</td>
+                                    <td>76-81</td>
+                                    <td>61-66</td>
+                                    <td>130-140</td>
+                                    <td>8-9 years</td>
+                                </tr>
+                                <tr>
+                                    <td>S</td>
+                                    <td>81-86</td>
+                                    <td>66-71</td>
+                                    <td>140-150</td>
+                                    <td>10-11 years</td>
+                                </tr>
+                                <tr>
+                                    <td>M</td>
+                                    <td>86-91</td>
+                                    <td>71-76</td>
+                                    <td>150-160</td>
+                                    <td>12-13 years</td>
+                                </tr>
+                                <tr>
+                                    <td>L</td>
+                                    <td>91-96</td>
+                                    <td>76-81</td>
+                                    <td>160-170</td>
+                                    <td>14-15 years</td>
+                                </tr>
+                                <tr>
+                                    <td>XL</td>
+                                    <td>96-101</td>
+                                    <td>81-86</td>
+                                    <td>170-180</td>
+                                    <td>16+ years</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="guide-tips">
+                        <h3>How to Measure</h3>
+                        <ul>
+                            <li><strong>Chest:</strong> Measure around the fullest part</li>
+                            <li><strong>Waist:</strong> Measure around natural waistline</li>
+                            <li><strong>Height:</strong> Measure without shoes</li>
+                            <li>For best fit, choose size based on current measurements</li>
+                            <li>Allow room for growth in children</li>
+                        </ul>
+                        <div class="measurement-help">
+                            <p><i class="fas fa-phone"></i> Need help? Call: (012) 345-6789 ext. 303</p>
+                            <p><i class="fas fa-envelope"></i> Email: store@mafusecondary.edu</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Delivery Info -->
+            <section class="delivery-info-section" id="delivery-info">
+                <h2>Delivery Information</h2>
+                <div class="delivery-options">
+                    <div class="delivery-option">
+                        <div class="option-icon">
+                            <i class="fas fa-truck"></i>
+                        </div>
+                        <h3>Standard Delivery</h3>
+                        <p class="price">R 50 (Free over R500)</p>
+                        <p class="time">3-5 working days</p>
+                        <p>Delivery to your door</p>
+                    </div>
+                    <div class="delivery-option">
+                        <div class="option-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <h3>Express Delivery</h3>
+                        <p class="price">R 100</p>
+                        <p class="time">1-2 working days</p>
+                        <p>Priority processing</p>
+                    </div>
+                    <div class="delivery-option">
+                        <div class="option-icon">
+                            <i class="fas fa-store"></i>
+                        </div>
+                        <h3>School Collection</h3>
+                        <p class="price">FREE</p>
+                        <p class="time">Ready in 24 hours</p>
+                        <p>Collect at school office</p>
+                    </div>
+                </div>
+                <div class="delivery-terms">
+                    <h3>Delivery Terms & Conditions</h3>
+                    <ul>
+                        <li>Orders placed before 2 PM are processed same day</li>
+                        <li>School collection available Mon-Fri, 8 AM - 4 PM</li>
+                        <li>Delivery to major cities only (additional charges may apply for remote areas)</li>
+                        <li>You will receive tracking information via SMS/Email</li>
+                        <li>Someone must be available to receive delivery</li>
+                    </ul>
+                </div>
+            </section>
+            
+            <!-- Returns Policy -->
+            <section class="returns-policy" id="returns">
+                <h2>Returns & Exchanges</h2>
+                <div class="returns-content">
+                    <div class="returns-card">
+                        <div class="returns-icon">
+                            <i class="fas fa-undo"></i>
+                        </div>
+                        <h3>Easy Returns</h3>
+                        <p>30-day return policy on unworn items with tags attached</p>
+                        <ul>
+                            <li>Free returns for faulty items</li>
+                            <li>Refund within 7-10 working days</li>
+                            <li>Exchange for different size/color</li>
+                        </ul>
+                    </div>
+                    <div class="returns-card">
+                        <div class="returns-icon">
+                            <i class="fas fa-exchange-alt"></i>
+                        </div>
+                        <h3>Size Exchange</h3>
+                        <p>Not sure about size? We make exchanges easy</p>
+                        <ul>
+                            <li>Free size exchange within 30 days</li>
+                            <li>Keep item until replacement arrives</li>
+                            <li>No return shipping charges</li>
+                        </ul>
+                    </div>
+                    <div class="returns-card">
+                        <div class="returns-icon">
+                            <i class="fas fa-times-circle"></i>
+                        </div>
+                        <h3>Non-Returnable Items</h3>
+                        <p>Some items cannot be returned for hygiene reasons</p>
+                        <ul>
+                            <li>Personalized/uniform items</li>
+                            <li>Opened stationery packs</li>
+                            <li>Underwear & socks</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="returns-process">
+                    <h3>How to Return</h3>
+                    <div class="process-steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <p>Contact store with order number</p>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <p>Receive return authorization</p>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <p>Package items with original tags</p>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">4</div>
+                            <p>Drop at school office or arrange collection</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <div class="logo">MS</div>
+                        <div>
+                            <h3>Mafu Secondary School</h3>
+                            <p class="slogan">"Empowering Minds, Building Character, Shaping Futures"</p>
+                        </div>
+                    </div>
+                    <p>Providing quality education from Grade 8 to 12 since 1995. Accredited by the Department of Education.</p>
+                    <div class="footer-contact">
+                        <p><i class="fas fa-map-marker-alt"></i> 123 Education Street, Mafu City</p>
+                        <p><i class="fas fa-phone"></i> (012) 345-6789</p>
+                        <p><i class="fas fa-envelope"></i> store@mafusecondary.edu</p>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Store Categories</h3>
+                    <ul>
+                        <li><a href="#"><i class="fas fa-tshirt"></i> Uniforms</a></li>
+                        <li><a href="#"><i class="fas fa-pencil-alt"></i> Stationery</a></li>
+                        <li><a href="#"><i class="fas fa-football-ball"></i> Sports Gear</a></li>
+                        <li><a href="#"><i class="fas fa-shopping-bag"></i> Merchandise</a></li>
+                        <li><a href="#"><i class="fas fa-book"></i> Books</a></li>
+                        <li><a href="#"><i class="fas fa-gift"></i> Gift Items</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Customer Service</h3>
+                    <ul>
+                        <li><a href="#delivery-info"><i class="fas fa-truck"></i> Delivery Info</a></li>
+                        <li><a href="#returns"><i class="fas fa-undo"></i> Returns Policy</a></li>
+                        <li><a href="#size-guide"><i class="fas fa-ruler"></i> Size Guide</a></li>
+                        <li><a href="#"><i class="fas fa-question-circle"></i> FAQ</a></li>
+                        <li><a href="#"><i class="fas fa-lock"></i> Privacy Policy</a></li>
+                        <li><a href="#"><i class="fas fa-file-contract"></i> Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Store Information</h3>
+                    <div class="store-hours">
+                        <h4>Store Hours</h4>
+                        <p><strong>School Office:</strong> Mon-Fri: 8:00 AM - 4:00 PM</p>
+                        <p><strong>Online Store:</strong> 24/7</p>
+                        <p><strong>Collection Point:</strong> School Administration Building</p>
+                    </div>
+                    
+                    <div class="newsletter">
+                        <h4>Store Newsletter</h4>
+                        <p>Get updates on new arrivals & sales</p>
+                        <div class="newsletter-form">
+                            <input type="email" placeholder="Your email address">
+                            <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                        </div>
+                    </div>
+                    
+                    <div class="store-app">
+                        <h4>Shop on Mobile</h4>
+                        <div class="app-badges">
+                            <a href="#" class="app-badge">
+                                <i class="fab fa-google-play"></i> Google Play
+                            </a>
+                            <a href="#" class="app-badge">
+                                <i class="fab fa-app-store"></i> App Store
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>&copy; 2023 Mafu Secondary School. All Rights Reserved.</p>
+                    <p>Official School Store | E-commerce Platform v2.0</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#"><i class="fas fa-shield-alt"></i> Secure Shopping</a>
+                    <a href="#"><i class="fas fa-credit-card"></i> Payment Methods</a>
+                    <a href="#"><i class="fas fa-headset"></i> Support</a>
+                    <a href="#"><i class="fas fa-envelope"></i> Contact Store</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Product Quick View Modal -->
+    <div class="modal" id="quickViewModal">
+        <div class="modal-content quick-view-modal">
+            <button class="close-modal" onclick="closeQuickView()">&times;</button>
+            <div class="quick-view-content" id="quickViewContent">
+                <!-- Product details will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Checkout Modal -->
+    <div class="modal" id="checkoutModal">
+        <div class="modal-content checkout-modal">
+            <button class="close-modal" onclick="closeCheckout()">&times;</button>
+            <div class="checkout-container">
+                <div class="checkout-header">
+                    <h2><i class="fas fa-lock"></i> Secure Checkout</h2>
+                    <div class="checkout-steps">
+                        <div class="step active">1. Cart</div>
+                        <div class="step">2. Details</div>
+                        <div class="step">3. Payment</div>
+                        <div class="step">4. Confirm</div>
+                    </div>
+                </div>
+                
+                <div class="checkout-content">
+                    <!-- Step 1: Cart Review -->
+                    <div class="checkout-step active" id="step1">
+                        <h3>Review Your Order</h3>
+                        <div class="checkout-items" id="checkoutItems">
+                            <!-- Cart items will be loaded here -->
+                        </div>
+                        <div class="checkout-summary">
+                            <div class="summary-row">
+                                <span>Subtotal</span>
+                                <span id="checkoutSubtotal">R 0.00</span>
+                            </div>
+                            <div class="summary-row">
+                                <span>Delivery</span>
+                                <span id="checkoutDelivery">R 0.00</span>
+                            </div>
+                            <div class="summary-row total">
+                                <span>Total</span>
+                                <span id="checkoutTotal">R 0.00</span>
+                            </div>
+                        </div>
+                        <button class="next-step" onclick="nextStep(2)">Continue to Details</button>
+                    </div>
+                    
+                    <!-- Step 2: Customer Details -->
+                    <div class="checkout-step" id="step2">
+                        <h3>Customer Information</h3>
+                        <form class="checkout-form">
+                            <div class="form-section">
+                                <h4>Contact Details</h4>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="firstName">First Name *</label>
+                                        <input type="text" id="firstName" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="lastName">Last Name *</label>
+                                        <input type="text" id="lastName" required>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="email">Email *</label>
+                                        <input type="email" id="email" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="phone">Phone *</label>
+                                        <input type="tel" id="phone" required>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-section">
+                                <h4>Delivery Address</h4>
+                                <div class="form-group">
+                                    <label for="address">Street Address *</label>
+                                    <input type="text" id="address" required>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="city">City *</label>
+                                        <input type="text" id="city" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="postalCode">Postal Code *</label>
+                                        <input type="text" id="postalCode" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="deliveryType">Delivery Method</label>
+                                    <select id="deliveryType">
+                                        <option value="standard">Standard Delivery (R50)</option>
+                                        <option value="express">Express Delivery (R100)</option>
+                                        <option value="collection">School Collection (Free)</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="form-actions">
+                                <button type="button" class="prev-step" onclick="prevStep(1)">Back</button>
+                                <button type="button" class="next-step" onclick="nextStep(3)">Continue to Payment</button>
+                            </div>
+                        </form>
+                    </div>
+                    
+                    <!-- Step 3: Payment -->
+                    <div class="checkout-step" id="step3">
+                        <h3>Payment Method</h3>
+                        <div class="payment-options">
+                            <div class="payment-option">
+                                <input type="radio" id="creditCard" name="payment" value="card" checked>
+                                <label for="creditCard">
+                                    <i class="fas fa-credit-card"></i>
+                                    <span>Credit/Debit Card</span>
+                                </label>
+                                <div class="card-details">
+                                    <div class="form-group">
+                                        <label for="cardNumber">Card Number</label>
+                                        <input type="text" id="cardNumber" placeholder="1234 5678 9012 3456">
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="expiry">Expiry Date</label>
+                                            <input type="text" id="expiry" placeholder="MM/YY">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="cvv">CVV</label>
+                                            <input type="text" id="cvv" placeholder="123">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="payment-option">
+                                <input type="radio" id="eft" name="payment" value="eft">
+                                <label for="eft">
+                                    <i class="fas fa-university"></i>
+                                    <span>Bank Transfer (EFT)</span>
+                                </label>
+                                <div class="eft-details">
+                                    <p>Bank: Standard Bank</p>
+                                    <p>Account: Mafu Secondary School Store</p>
+                                    <p>Account Number: 0123456789</p>
+                                    <p>Branch: 012345</p>
+                                    <p>Reference: Your order number</p>
+                                </div>
+                            </div>
+                            
+                            <div class="payment-option">
+                                <input type="radio" id="cash" name="payment" value="cash">
+                                <label for="cash">
+                                    <i class="fas fa-money-bill-wave"></i>
+                                    <span>Cash on Collection</span>
+                                </label>
+                                <div class="cash-details">
+                                    <p>Pay when collecting at school office</p>
+                                    <p>Bring your order confirmation</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="button" class="prev-step" onclick="prevStep(2)">Back</button>
+                            <button type="button" class="next-step" onclick="nextStep(4)">Review & Confirm</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 4: Confirmation -->
+                    <div class="checkout-step" id="step4">
+                        <h3>Order Confirmation</h3>
+                        <div class="confirmation-content">
+                            <div class="confirmation-success">
+                                <i class="fas fa-check-circle"></i>
+                                <h4>Order Ready for Processing</h4>
+                                <p>Order #: <strong id="orderNumber">MS202312345</strong></p>
+                                <p>Date: <strong id="orderDate">15 Dec 2023</strong></p>
+                            </div>
+                            
+                            <div class="order-summary">
+                                <h4>Order Summary</h4>
+                                <div class="summary-details" id="orderSummary">
+                                    <!-- Order summary will be loaded here -->
+                                </div>
+                            </div>
+                            
+                            <div class="next-steps">
+                                <h4>What's Next?</h4>
+                                <ul>
+                                    <li><i class="fas fa-envelope"></i> Confirmation email sent</li>
+                                    <li><i class="fas fa-clock"></i> Order processed within 24 hours</li>
+                                    <li><i class="fas fa-truck"></i> Delivery notification sent</li>
+                                    <li><i class="fas fa-phone"></i> Contact us for any queries</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="confirmation-actions">
+                            <button class="print-order" onclick="printOrder()">
+                                <i class="fas fa-print"></i> Print Order
+                            </button>
+                            <button class="continue-shopping" onclick="completeOrder()">
+                                <i class="fas fa-shopping-bag"></i> Continue Shopping
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div class="modal" id="successModal">
+        <div class="modal-content success-modal">
+            <div class="success-content">
+                <i class="fas fa-check-circle"></i>
+                <h3>Order Successful!</h3>
+                <p>Thank you for your purchase from Mafu School Store</p>
+                <p class="order-id">Order #: <strong id="successOrderId">MS202312345</strong></p>
+                <p>A confirmation email has been sent to your email address</p>
+                <div class="success-actions">
+                    <button class="view-order" onclick="viewOrderDetails()">
+                        <i class="fas fa-eye"></i> View Order
+                    </button>
+                    <button class="close-success" onclick="closeSuccess()">
+                        <i class="fas fa-times"></i> Close
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/store.js"></script>
+</body>
+</html>
