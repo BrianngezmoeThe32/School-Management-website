@@ -42,15 +42,19 @@ header {
 }
 
 .header-container {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0px 0px 0px 0px;
+    margin: 0px 20px 0px 20px;
 }
 
 .logo-container {
     display: flex;
     align-items: center;
     gap: 15px;
+    left: 0;
 }
 
 .logo {
@@ -79,12 +83,15 @@ header {
 }
 
 nav ul {
+    width: fit-content;
     display: flex;
     list-style: none;
+    justify-content: space-evenly;
 }
 
 nav ul li {
     margin-left: 20px;
+    width: 100px;
 }
 
 nav ul li a {
@@ -124,7 +131,7 @@ nav ul li a:hover {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(rgba(0, 31, 63, 0.85), rgba(0, 31, 63, 0.9)), url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+    background-image:linear-gradient(rgba(0, 31, 63, 0.85)), url('../images/download3.jpeg');
     background-size: cover;
     background-position: center;
     color: var(--white);
@@ -1500,13 +1507,15 @@ footer {
 .partnership-cta {
     text-align: center;
     padding: 40px;
-    background: linear-gradient(135deg, rgba(255, 215, 0, 0.1) 0%, rgba(255, 215, 0, 0.05) 100%);
+    background-image: url('../images/download1.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
     border-radius: 10px;
     border: 2px solid var(--gold);
 }
 
 .partnership-cta h3 {
-    color: var(--navy-blue);
+    color: yellow;
     margin-bottom: 10px;
 }
 
