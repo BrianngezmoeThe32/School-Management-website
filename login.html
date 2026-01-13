@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Portals - Mafu Secondary School</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo-container">
+                <div class="logo">MS</div>
+                <div class="school-name">
+                    <h1>Mafu Secondary School</h1>
+                    <h2>Excellence in Education Since 1995</h2>
+                </div>
+            </div>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav>
+                <ul id="mainMenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="team.html">Our Team</a></li>
+                    <li><a href="announcement.html">Announcements</a></li>
+                    <li><a href="marketing.html">Admissions</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">Resources <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-content">
+                            <a href="donation.html">Matric Support</a>
+                            <a href="store.html">School Store</a>
+                            <a href="#">Learning Materials</a>
+                            <a href="#">Timetables</a>
+                            <a href="#">Grades Portal</a>
+                        </div>
+                    </li>
+                    <li><a href="login.html" class="login-nav-btn active">Login <i class="fas fa-sign-in-alt"></i></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Login Page Content -->
+    <main class="login-page">
+        <div class="container">
+            <div class="login-header">
+                <h1>School Management System Login</h1>
+                <p>Access your personalized portal based on your role in the school community</p>
+            </div>
+            
+            <div class="login-portals-section">
+                <h2 class="section-title">Select Your Login Portal</h2>
+                <div class="portals-grid">
+                    <div class="portal-card staff">
+                        <div class="portal-icon">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <div class="portal-content">
+                            <h3>Staff & Principal</h3>
+                            <p>Administrative tools, student records, and communication systems</p>
+                            <ul class="portal-features">
+                                <li><i class="fas fa-check"></i> Student management</li>
+                                <li><i class="fas fa-check"></i> Academic reporting</li>
+                                <li><i class="fas fa-check"></i> Communication tools</li>
+                            </ul>
+                            <button class="portal-login-btn" onclick="showLoginForm('staff')">
+                                <i class="fas fa-sign-in-alt"></i> Staff Login
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="portal-card teacher">
+                        <div class="portal-icon">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                        </div>
+                        <div class="portal-content">
+                            <h3>Teachers</h3>
+                            <p>Upload materials, record grades, manage classes, and communicate with parents</p>
+                            <ul class="portal-features">
+                                <li><i class="fas fa-check"></i> Grade management</li>
+                                <li><i class="fas fa-check"></i> Lesson planning</li>
+                                <li><i class="fas fa-check"></i> Parent communication</li>
+                            </ul>
+                            <button class="portal-login-btn" onclick="showLoginForm('teacher')">
+                                <i class="fas fa-sign-in-alt"></i> Teacher Login
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="portal-card parent">
+                        <div class="portal-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="portal-content">
+                            <h3>Parents</h3>
+                            <p>Monitor your child's progress, fees, timetable, and communicate with teachers</p>
+                            <ul class="portal-features">
+                                <li><i class="fas fa-check"></i> Progress tracking</li>
+                                <li><i class="fas fa-check"></i> Fee management</li>
+                                <li><i class="fas fa-check"></i> Direct messaging</li>
+                            </ul>
+                            <button class="portal-login-btn" onclick="showLoginForm('parent')">
+                                <i class="fas fa-sign-in-alt"></i> Parent Login
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="portal-card learner">
+                        <div class="portal-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="portal-content">
+                            <h3>Learners</h3>
+                            <p>Access learning materials, view grades, submit assignments, and check announcements</p>
+                            <ul class="portal-features">
+                                <li><i class="fas fa-check"></i> Learning resources</li>
+                                <li><i class="fas fa-check"></i> Assignment submission</li>
+                                <li><i class="fas fa-check"></i> Grade viewing</li>
+                            </ul>
+                            <button class="portal-login-btn" onclick="showLoginForm('learner')">
+                                <i class="fas fa-sign-in-alt"></i> Learner Login
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Login Form Section -->
+            <div class="login-form-section" id="loginFormSection" style="display: none;">
+                <div class="login-form-container">
+                    <div class="form-header">
+                        <h2 id="loginFormTitle">Login to Your Account</h2>
+                        <button class="back-to-portals" onclick="hideLoginForm()">
+                            <i class="fas fa-arrow-left"></i> Back to Portals
+                        </button>
+                    </div>
+                    
+                    <form id="loginForm" onsubmit="processLogin(event)">
+                        <div class="user-type-display">
+                            <div class="user-type-icon">
+                                <i id="userTypeIcon" class="fas fa-user"></i>
+                            </div>
+                            <div>
+                                <h3 id="userTypeDisplay">Staff Member</h3>
+                                <p id="userTypeDescription">Access administrative tools and student records</p>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="loginEmail">
+                                <i class="fas fa-envelope"></i> School Email Address
+                            </label>
+                            <input type="email" id="loginEmail" placeholder="name@mafusecondary.edu" required>
+                            <small class="form-help">Use your school-issued email address</small>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="loginPassword">
+                                <i class="fas fa-lock"></i> Password
+                            </label>
+                            <div class="password-input">
+                                <input type="password" id="loginPassword" placeholder="Enter your password" required>
+                                <button type="button" class="toggle-password" onclick="togglePasswordVisibility()">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                            <small class="form-help">
+                                <a href="#" class="forgot-password">Forgot password?</a>
+                            </small>
+                        </div>
+                        
+                        <div class="form-group" id="learnerGradeField" style="display: none;">
+                            <label for="learnerGrade">
+                                <i class="fas fa-graduation-cap"></i> Grade
+                            </label>
+                            <select id="learnerGrade">
+                                <option value="">Select Grade</option>
+                                <option value="8">Grade 8</option>
+                                <option value="9">Grade 9</option>
+                                <option value="10">Grade 10</option>
+                                <option value="11">Grade 11</option>
+                                <option value="12">Grade 12</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-options">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="rememberMe">
+                                <span>Remember me</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="trustDevice">
+                                <span>Trust this device</span>
+                            </label>
+                        </div>
+                        
+                        <button type="submit" class="login-submit-btn">
+                            <i class="fas fa-sign-in-alt"></i> Sign In
+                        </button>
+                        
+                        <div class="login-divider">
+                            <span>or</span>
+                        </div>
+                        
+                        <div class="alternative-login">
+                            <p>Having trouble logging in?</p>
+                            <div class="alternative-options">
+                                <a href="#" class="alt-option">
+                                    <i class="fas fa-key"></i> Reset Password
+                                </a>
+                                <a href="#" class="alt-option">
+                                    <i class="fas fa-user-plus"></i> Request Account
+                                </a>
+                                <a href="#" class="alt-option">
+                                    <i class="fas fa-headset"></i> Support
+                                </a>
+                            </div>
+                        </div>
+                    </form>
+                    
+                    <div class="login-notice">
+                        <div class="notice-icon">
+                            <i class="fas fa-info-circle"></i>
+                        </div>
+                        <div class="notice-content">
+                            <h4>Important Notice</h4>
+                            <p>For security reasons, please log out after each session when using shared computers. Your school email and password are required for access.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="login-info-sidebar">
+                    <div class="info-card">
+                        <h3><i class="fas fa-shield-alt"></i> Security Features</h3>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Encrypted connections</li>
+                            <li><i class="fas fa-check"></i> Two-factor authentication</li>
+                            <li><i class="fas fa-check"></i> Session timeout protection</li>
+                            <li><i class="fas fa-check"></i> Activity logging</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="info-card">
+                        <h3><i class="fas fa-question-circle"></i> Need Help?</h3>
+                        <p>If you're experiencing login issues:</p>
+                        <ul>
+                            <li>Ensure you're using your school email</li>
+                            <li>Check your internet connection</li>
+                            <li>Clear browser cache and cookies</li>
+                            <li>Contact IT Support: it@mafusecondary.edu</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="info-card">
+                        <h3><i class="fas fa-mobile-alt"></i> Mobile Access</h3>
+                        <p>Access your portal on the go with our mobile app:</p>
+                        <div class="app-badges">
+                            <a href="#" class="app-badge">
+                                <i class="fab fa-google-play"></i> Google Play
+                            </a>
+                            <a href="#" class="app-badge">
+                                <i class="fab fa-app-store"></i> App Store
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <div class="logo">MS</div>
+                        <div>
+                            <h3>Mafu Secondary School</h3>
+                            <p class="slogan">"Empowering Minds, Building Character, Shaping Futures"</p>
+                        </div>
+                    </div>
+                    <p>Providing quality education from Grade 8 to 12 since 1995. Accredited by the Department of Education.</p>
+                    <div class="footer-contact">
+                        <p><i class="fas fa-map-marker-alt"></i> 123 Education Street, Mafu City</p>
+                        <p><i class="fas fa-phone"></i> (012) 345-6789</p>
+                        <p><i class="fas fa-envelope"></i> info@mafusecondary.edu</p>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                        <li><a href="about.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+                        <li><a href="team.html"><i class="fas fa-users"></i> Our Team</a></li>
+                        <li><a href="announcement.html"><i class="fas fa-bullhorn"></i> Announcements</a></li>
+                        <li><a href="marketing.html"><i class="fas fa-graduation-cap"></i> Admissions</a></li>
+                        <li><a href="donation.html"><i class="fas fa-hand-holding-heart"></i> Matric Support</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="store.html"><i class="fas fa-store"></i> School Store</a></li>
+                        <li><a href="login.html"><i class="fas fa-sign-in-alt"></i> Login Portals</a></li>
+                        <li><a href="#"><i class="fas fa-book"></i> Learning Materials</a></li>
+                        <li><a href="#"><i class="fas fa-calendar"></i> Timetables</a></li>
+                        <li><a href="#"><i class="fas fa-chart-line"></i> Grades Portal</a></li>
+                        <li><a href="#"><i class="fas fa-download"></i> Downloads</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Connect With Us</h3>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-icon twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-icon instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-icon youtube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="#" class="social-icon linkedin">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                    
+                    <div class="newsletter">
+                        <h4>Subscribe to Newsletter</h4>
+                        <div class="newsletter-form">
+                            <input type="email" placeholder="Your email address">
+                            <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                        </div>
+                    </div>
+                    
+                    <div class="school-hours">
+                        <h4>School Hours</h4>
+                        <p>Mon-Fri: 7:30 AM - 4:30 PM</p>
+                        <p>Office: 8:00 AM - 4:00 PM</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>&copy; 2023 Mafu Secondary School. All Rights Reserved.</p>
+                    <p>Designed with <i class="fas fa-heart" style="color: #dc3545;"></i> using school colors: Navy Blue, Gold & White</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Sitemap</a>
+                    <a href="#">Accessibility</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/auth.js"></script>
+</body>
+</html>

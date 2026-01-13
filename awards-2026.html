@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026 Annual Awards - Mafu Secondary School</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/awards.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo-container">
+                <div class="logo">MS</div>
+                <div class="school-name">
+                    <h1>Mafu Secondary School</h1>
+                    <h2>Excellence in Education Since 1995</h2>
+                </div>
+            </div>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav>
+                <ul id="mainMenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="team.html">Our Team</a></li>
+                    <li><a href="announcement.html">Announcements</a></li>
+                    <li><a href="marketing.html">Admissions</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">Resources <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-content">
+                            <a href="donation.html">Matric Support</a>
+                            <a href="store.html">School Store</a>
+                            <a href="top-learners.html">Top Learners</a>
+                            <a href="awards-2026.html" class="active">2026 Awards</a>
+                            <a href="awards-archive.html">Awards Archive</a>
+                            <a href="#">Grades Portal</a>
+                        </div>
+                    </li>
+                    <li><a href="login.html" class="login-nav-btn">Login <i class="fas fa-sign-in-alt"></i></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Awards Hero -->
+    <section class="awards-hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>2026 Annual Awards Ceremony</h1>
+                <p class="hero-subtitle">Celebrating Excellence & Achievement</p>
+                <p class="hero-description">Official recognition of outstanding academic performance and exceptional contributions for the 2026 academic year.</p>
+                <div class="hero-details">
+                    <div class="detail-item">
+                        <i class="fas fa-calendar-alt"></i>
+                        <div>
+                            <strong>Date:</strong> November 25, 2026
+                        </div>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <strong>Time:</strong> 10:00 AM - 2:00 PM
+                        </div>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <strong>Venue:</strong> School Hall
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="awards-page">
+        <div class="container">
+            <!-- Awards Summary -->
+            <section class="awards-summary">
+                <div class="summary-header">
+                    <h2>2026 Awards Summary</h2>
+                    <div class="summary-actions">
+                        <button class="action-btn print" onclick="printAllAwards()">
+                            <i class="fas fa-print"></i> Print All Awards
+                        </button>
+                        <button class="action-btn download" onclick="downloadAwardsPackage()">
+                            <i class="fas fa-download"></i> Download Package
+                        </button>
+                    </div>
+                </div>
+                <div class="summary-stats">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <div class="stat-content">
+                            <div class="stat-number">50</div>
+                            <div class="stat-label">Total Awards</div>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="stat-content">
+                            <div class="stat-number">45</div>
+                            <div class="stat-label">Students Recognized</div>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="stat-content">
+                            <div class="stat-number">5</div>
+                            <div class="stat-label">Grade Levels</div>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <div class="stat-content">
+                            <div class="stat-number">8</div>
+                            <div class="stat-label">Award Categories</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Award Categories -->
+            <section class="award-categories">
+                <h2>Award Categories</h2>
+                <div class="categories-grid">
+                    <div class="category-card">
+                        <div class="category-icon gold">
+                            <i class="fas fa-crown"></i>
+                        </div>
+                        <h3>Top Academic Performer</h3>
+                        <p>Highest overall average in each grade</p>
+                        <div class="category-stats">
+                            <span>5 Awards</span>
+                            <span>Grade 8-12</span>
+                        </div>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-icon silver">
+                            <i class="fas fa-medal"></i>
+                        </div>
+                        <h3>Most Improved</h3>
+                        <p>Greatest academic improvement from previous year</p>
+                        <div class="category-stats">
+                            <span>5 Awards</span>
+                            <span>Grade 8-12</span>
+                        </div>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-icon bronze">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h3>Subject Excellence</h3>
+                        <p>Top performance in specific subjects</p>
+                        <div class="category-stats">
+                            <span>20 Awards</span>
+                            <span>All Subjects</span>
+                        </div>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-icon blue">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3>Leadership Award</h3>
+                        <p>Exceptional leadership and contribution</p>
+                        <div class="category-stats">
+                            <span>5 Awards</span>
+                            <span>All Grades</span>
+                        </div>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-icon green">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h3>Community Service</h3>
+                        <p>Outstanding community contribution</p>
+                        <div class="category-stats">
+                            <span>5 Awards</span>
+                            <span>All Grades</span>
+                        </div>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-icon purple">
+                            <i class="fas fa-dumbbell"></i>
+                        </div>
+                        <h3>Sports Excellence</h3>
+                        <p>Outstanding sports achievement</p>
+                        <div class="category-stats">
+                            <span>5 Awards</span>
+                            <span>All Grades</span>
+                        </div>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-icon red">
+                            <i class="fas fa-music"></i>
+                        </div>
+                        <h3>Arts & Culture</h3>
+                        <p>Excellence in arts and cultural activities</p>
+                        <div class="category-stats">
+                            <span>5 Awards</span>
+                            <span>All Grades</span>
+                        </div>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-icon orange">
+                            <i class="fas fa-hand-sparkles"></i>
+                        </div>
+                        <h3>Perfect Attendance</h3>
+                        <p>100% attendance throughout the year</p>
+                        <div class="category-stats">
+                            <span>10 Awards</span>
+                            <span>All Grades</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Grade-wise Awards -->
+            <section class="grade-awards">
+                <h2>Award Recipients by Grade</h2>
+                <div class="grade-tabs">
+                    <button class="grade-btn active" data-grade="all">All Grades</button>
+                    <button class="grade-btn" data-grade="8">Grade 8</button>
+                    <button class="grade-btn" data-grade="9">Grade 9</button>
+                    <button class="grade-btn" data-grade="10">Grade 10</button>
+                    <button class="grade-btn" data-grade="11">Grade 11</button>
+                    <button class="grade-btn" data-grade="12">Grade 12</button>
+                </div>
+
+                <div class="awards-table-container">
+                    <table class="awards-table">
+                        <thead>
+                            <tr>
+                                <th>Award</th>
+                                <th>Recipient</th>
+                                <th>Grade</th>
+                                <th>Achievement</th>
+                                <th>Average %</th>
+                                <th>Prize</th>
+                                <th>Certificate</th>
+                            </tr>
+                        </thead>
+                        <tbody id="awardsTableBody">
+                            <!-- Data will be loaded by JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Top Performers Gallery -->
+            <section class="top-performers">
+                <h2>Top 3 Performers by Grade</h2>
+                <div class="performers-grid">
+                    <!-- Grade 8 Top 3 -->
+                    <div class="grade-performers" data-grade="8">
+                        <h3>Grade 8 Top Performers</h3>
+                        <div class="performer-cards">
+                            <div class="performer-card gold">
+                                <div class="rank-badge">1st</div>
+                                <div class="performer-info">
+                                    <h4>Sarah Johnson</h4>
+                                    <p class="average">Average: 96.5%</p>
+                                    <p class="achievement">Top Academic Performer</p>
+                                </div>
+                                <button class="view-certificate" onclick="viewCertificate('2026-8-1')">
+                                    <i class="fas fa-certificate"></i> View
+                                </button>
+                            </div>
+                            <div class="performer-card silver">
+                                <div class="rank-badge">2nd</div>
+                                <div class="performer-info">
+                                    <h4>Michael Chen</h4>
+                                    <p class="average">Average: 94.2%</p>
+                                    <p class="achievement">Mathematics Excellence</p>
+                                </div>
+                                <button class="view-certificate" onclick="viewCertificate('2026-8-2')">
+                                    <i class="fas fa-certificate"></i> View
+                                </button>
+                            </div>
+                            <div class="performer-card bronze">
+                                <div class="rank-badge">3rd</div>
+                                <div class="performer-info">
+                                    <h4>Amina Patel</h4>
+                                    <p class="average">Average: 93.8%</p>
+                                    <p class="achievement">Most Improved</p>
+                                </div>
+                                <button class="view-certificate" onclick="viewCertificate('2026-8-3')">
+                                    <i class="fas fa-certificate"></i> View
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Grade 9 Top 3 -->
+                    <div class="grade-performers" data-grade="9">
+                        <h3>Grade 9 Top Performers</h3>
+                        <div class="performer-cards">
+                            <div class="performer-card gold">
+                                <div class="rank-badge">1st</div>
+                                <div class="performer-info">
+                                    <h4>David Williams</h4>
+                                    <p class="average">Average: 97.1%</p>
+                                    <p class="achievement">Top Academic Performer</p>
+                                </div>
+                                <button class="view-certificate" onclick="viewCertificate('2026-9-1')">
+                                    <i class="fas fa-certificate"></i> View
+                                </button>
+                            </div>
+                            <div class="performer-card silver">
+                                <div class="rank-badge">2nd</div>
+                                <div class="performer-info">
+                                    <h4>Lisa Rodriguez</h4>
+                                    <p class="average">Average: 95.4%</p>
+                                    <p class="achievement">Science Excellence</p>
+                                </div>
+                                <button class="view-certificate" onclick="viewCertificate('2026-9-2')">
+                                    <i class="fas fa-certificate"></i> View
+                                </button>
+                            </div>
+                            <div class="performer-card bronze">
+                                <div class="rank-badge">3rd</div>
+                                <div class="performer-info">
+                                    <h4>James Wilson</h4>
+                                    <p class="average">Average: 94.9%</p>
+                                    <p class="achievement">Leadership Award</p>
+                                </div>
+                                <button class="view-certificate" onclick="viewCertificate('2026-9-3')">
+                                    <i class="fas fa-certificate"></i> View
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Grade 10 Top 3 -->
+                    <div class="grade-performers" data-grade="10">
+                        <h3>Grade 10 Top Performers</h3>
+                        <div class="performer-cards">
+                            <div class="performer-card gold">
+                                <div class="rank-badge">1st</div>
+                                <div class="performer-info">
+                                    <h4>Emma Thompson</h4>
+                                    <p class="average">Average: 96.8%</p>
+                                    <p class="achievement">Top Academic Performer</p>
+                                </div>
+                                <button class="view-certificate" onclick="viewCertificate('2026-10-1')">
+                                    <i class="fas fa-certificate"></i> View
+                                </button>
+                            </div>
+                            <div class="performer-card silver">
+                                <div class="rank-badge">2nd</div>
+                                <div class="performer-info">
+                                    <h4>Robert Kim</h4>
+                                    <p class="average">Average: 95.7%</p>
+                                    <p class="achievement">Languages Excellence</p>
+                                </div>
+                                <button class="view-certificate" onclick="viewCertificate('2026-10-2')">
+                                    <i class="fas fa-certificate"></i> View
+                                </button>
+                            </div>
+                            <div class="performer-card bronze">
+                                <div class="rank-badge">3rd</div>
+                                <div class="performer-info">
+                                    <h4>Sophia Garcia</h4>
+                                    <p class="average">Average: 94.3%</p>
+                                    <p class="achievement">Community Service</p>
+                                </div>
+                                <button class="view-certificate" onclick="viewCertificate('2026-10-3')">
+                                    <i class="fas fa-certificate"></i> View
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Grade 11 Top 3 -->
+                    <div class="grade-performers" data-grade="11">
+                        <h3>Grade 11 Top Performers</h3>
+                        <div class="performer-cards">
+                            <div class="performer-card gold">
+                                <div class="rank-badge">1st</div>
+                                <div class="performer-info">
+                                    <h4>Daniel Brown</h4>
+                                    <p class="average">Average: 97.5%</p>
+                                    <p class="achievement">Top Academic Performer</p>
+                                </div>
+                                <button class="view-certificate" onclick="viewCertificate('2026-11-1')">
+                                    <i class="fas fa-certificate"></i> View
+                                </button>
+                            </div>
+                            <div class="performer-card silver">
+                                <div class="rank-badge">2nd</div>
+                                <div class="performer-info">
+                                    <h4>Olivia Davis</h4>
+                                    <p class="average">Average: 96.2%</p>
+                                    <p class="achievement">Business Studies</p>
+                                </div>
+                                <button class="view-certificate" onclick="viewCertificate('2026-11-2')">
+                                    <i class="fas fa-certificate"></i> View
+                                </button>
+                            </div>
+                            <div class="performer-card bronze">
+                                <div class="rank-badge">3rd</div>
+                                <div class="performer-info">
+                                    <h4>Ethan Miller</h4>
+                                    <p class="average">Average: 95.8%</p>
+                                    <p class="achievement">Sports Excellence</p>
+                                </div>
+                                <button class="view-certificate" onclick="viewCertificate('2026-11-3')">
+                                    <i class="fas fa-certificate"></i> View
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Grade 12 Top 3 -->
+                    <div class="grade-performers" data-grade="12">
+                        <h3>Grade 12 Top Performers</h3>
+                        <div class="performer-cards">
+                            <div class="performer-card gold">
+                                <div class="rank-badge">1st</div>
+                                <div class="performer-info">
+                                    <h4>Isabella Taylor</h4>
+                                    <p class="average">Average: 98.2%</p>
+                                    <p class="achievement">Dux Scholar</p>
+                                </div>
+                                <button class="view-certificate" onclick="viewCertificate('2026-12-1')">
+                                    <i class="fas fa-certificate"></i> View
+                                </button>
+                            </div>
+                            <div class="performer-card silver">
+                                <div class="rank-badge">2nd</div>
+                                <div class="performer-info">
+                                    <h4>Alexander Moore</h4>
+                                    <p class="average">Average: 97.6%</p>
+                                    <p class="achievement">Science Excellence</p>
+                                </div>
+                                <button class="view-certificate" onclick="viewCertificate('2026-12-2')">
+                                    <i class="fas fa-certificate"></i> View
+                                </button>
+                            </div>
+                            <div class="performer-card bronze">
+                                <div class="rank-badge">3rd</div>
+                                <div class="performer-info">
+                                    <h4>Mia Anderson</h4>
+                                    <p class="average">Average: 96.9%</p>
+                                    <p class="achievement">Leadership Award</p>
+                                </div>
+                                <button class="view-certificate" onclick="viewCertificate('2026-12-3')">
+                                    <i class="fas fa-certificate"></i> View
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Awards Statistics -->
+            <section class="awards-statistics">
+                <h2>2026 Awards Statistics</h2>
+                <div class="stats-container">
+                    <div class="stats-chart">
+                        <canvas id="awardsChart"></canvas>
+                    </div>
+                    <div class="stats-data">
+                        <div class="data-item">
+                            <h4>Overall Performance</h4>
+                            <p>Average score of award recipients: <strong>95.7%</strong></p>
+                            <p>Highest individual score: <strong>98.2%</strong></p>
+                            <p>Most improved student: <strong>+15.3%</strong></p>
+                        </div>
+                        <div class="data-item">
+                            <h4>Grade Distribution</h4>
+                            <p>Grade 8: 10 awards</p>
+                            <p>Grade 9: 10 awards</p>
+                            <p>Grade 10: 10 awards</p>
+                            <p>Grade 11: 10 awards</p>
+                            <p>Grade 12: 10 awards</p>
+                        </div>
+                        <div class="data-item">
+                            <h4>Award Types</h4>
+                            <p>Academic: 25 awards</p>
+                            <p>Leadership: 5 awards</p>
+                            <p>Sports: 5 awards</p>
+                            <p>Arts: 5 awards</p>
+                            <p>Service: 10 awards</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Certificate Gallery -->
+            <section class="certificate-gallery">
+                <h2>Award Certificates</h2>
+                <p>Official award certificates for 2026 recipients</p>
+                <div class="certificate-grid">
+                    <div class="certificate-card">
+                        <div class="certificate-preview">
+                            <div class="certificate-design gold">
+                                <div class="certificate-header">
+                                    <h4>Certificate of Excellence</h4>
+                                    <p>Top Academic Performer 2026</p>
+                                </div>
+                                <div class="certificate-body">
+                                    <p>Awarded to</p>
+                                    <h3>Isabella Taylor</h3>
+                                    <p>Grade 12 - Dux Scholar</p>
+                                    <p>Average: 98.2%</p>
+                                </div>
+                                <div class="certificate-footer">
+                                    <p>Mafu Secondary School</p>
+                                    <p>November 25, 2026</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="download-certificate" onclick="downloadCertificate('2026-dux')">
+                            <i class="fas fa-download"></i> Download Template
+                        </button>
+                    </div>
+                    <div class="certificate-card">
+                        <div class="certificate-preview">
+                            <div class="certificate-design blue">
+                                <div class="certificate-header">
+                                    <h4>Leadership Award</h4>
+                                    <p>2026 Recognition</p>
+                                </div>
+                                <div class="certificate-body">
+                                    <p>Awarded to</p>
+                                    <h3>Mia Anderson</h3>
+                                    <p>Grade 12 - Student Council</p>
+                                    <p>For exceptional leadership</p>
+                                </div>
+                                <div class="certificate-footer">
+                                    <p>Mafu Secondary School</p>
+                                    <p>November 25, 2026</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="download-certificate" onclick="downloadCertificate('2026-leadership')">
+                            <i class="fas fa-download"></i> Download Template
+                        </button>
+                    </div>
+                    <div class="certificate-card">
+                        <div class="certificate-preview">
+                            <div class="certificate-design green">
+                                <div class="certificate-header">
+                                    <h4>Most Improved</h4>
+                                    <p>2026 Academic Year</p>
+                                </div>
+                                <div class="certificate-body">
+                                    <p>Awarded to</p>
+                                    <h3>Amina Patel</h3>
+                                    <p>Grade 8 - Most Improved</p>
+                                    <p>Improvement: +12.5%</p>
+                                </div>
+                                <div class="certificate-footer">
+                                    <p>Mafu Secondary School</p>
+                                    <p>November 25, 2026</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="download-certificate" onclick="downloadCertificate('2026-improved')">
+                            <i class="fas fa-download"></i> Download Template
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Archive Navigation -->
+            <section class="archive-navigation">
+                <h2>Previous Awards</h2>
+                <div class="archive-links">
+                    <a href="awards-archive.html#2025" class="archive-link">
+                        <i class="fas fa-archive"></i>
+                        <span>2025 Awards</span>
+                        <small>View previous year's awards</small>
+                    </a>
+                    <a href="awards-archive.html#2024" class="archive-link">
+                        <i class="fas fa-archive"></i>
+                        <span>2024 Awards</span>
+                        <small>Two years ago</small>
+                    </a>
+                    <a href="awards-archive.html" class="archive-link">
+                        <i class="fas fa-history"></i>
+                        <span>Complete Archive</span>
+                        <small>All historical awards</small>
+                    </a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <div class="logo">MS</div>
+                        <div>
+                            <h3>Mafu Secondary School</h3>
+                            <p class="slogan">"Empowering Minds, Building Character, Shaping Futures"</p>
+                        </div>
+                    </div>
+                    <p>Providing quality education from Grade 8 to 12 since 1995. Accredited by the Department of Education.</p>
+                    <div class="footer-contact">
+                        <p><i class="fas fa-map-marker-alt"></i> 123 Education Street, Mafu City</p>
+                        <p><i class="fas fa-phone"></i> (012) 345-6789</p>
+                        <p><i class="fas fa-envelope"></i> awards@mafusecondary.edu</p>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Awards & Recognition</h3>
+                    <ul>
+                        <li><a href="top-learners.html"><i class="fas fa-chart-line"></i> Top Learners</a></li>
+                        <li><a href="awards-2026.html"><i class="fas fa-award"></i> 2026 Awards</a></li>
+                        <li><a href="awards-archive.html"><i class="fas fa-archive"></i> Awards Archive</a></li>
+                        <li><a href="#"><i class="fas fa-certificate"></i> Certificate Templates</a></li>
+                        <li><a href="#"><i class="fas fa-calendar-alt"></i> Awards Calendar</a></li>
+                        <li><a href="#"><i class="fas fa-trophy"></i> Awards Criteria</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Academic Excellence</h3>
+                    <ul>
+                        <li><a href="#"><i class="fas fa-graduation-cap"></i> Academic Policy</a></li>
+                        <li><a href="#"><i class="fas fa-book"></i> Study Resources</a></li>
+                        <li><a href="#"><i class="fas fa-chalkboard-teacher"></i> Tutoring Programs</a></li>
+                        <li><a href="#"><i class="fas fa-university"></i> University Placement</a></li>
+                        <li><a href="#"><i class="fas fa-chart-bar"></i> Performance Reports</a></li>
+                        <li><a href="#"><i class="fas fa-user-graduate"></i> Alumni Success</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Awards Office</h3>
+                    <div class="awards-contact">
+                        <p><i class="fas fa-user-tie"></i> Awards Coordinator: Mrs. N. Mokoena</p>
+                        <p><i class="fas fa-envelope"></i> awards@mafusecondary.edu</p>
+                        <p><i class="fas fa-phone"></i> Ext: 205</p>
+                        <p><i class="fas fa-clock"></i> Mon-Fri: 8:00 AM - 4:00 PM</p>
+                    </div>
+                    
+                    <div class="awards-deadlines">
+                        <h4>Important Dates</h4>
+                        <p><i class="fas fa-calendar-check"></i> Awards Ceremony: Nov 25, 2026</p>
+                        <p><i class="fas fa-calendar-plus"></i> Nominations Open: Sep 1, 2026</p>
+                        <p><i class="fas fa-calendar-times"></i> Nominations Close: Oct 15, 2026</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>&copy; 2023 Mafu Secondary School. All Rights Reserved.</p>
+                    <p>Awards Management System | 2026 Edition</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#"><i class="fas fa-shield-alt"></i> Data Protection</a>
+                    <a href="#"><i class="fas fa-file-contract"></i> Awards Policy</a>
+                    <a href="#"><i class="fas fa-question-circle"></i> FAQ</a>
+                    <a href="#"><i class="fas fa-envelope"></i> Contact Awards</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Certificate Viewer Modal -->
+    <div class="modal" id="certificateModal">
+        <div class="modal-content certificate-modal">
+            <button class="close-modal" onclick="closeCertificateModal()">&times;</button>
+            <div class="certificate-viewer" id="certificateViewer">
+                <!-- Certificate will be loaded here -->
+            </div>
+            <div class="certificate-actions">
+                <button class="print-certificate" onclick="printCertificate()">
+                    <i class="fas fa-print"></i> Print Certificate
+                </button>
+                <button class="download-certificate" onclick="downloadCurrentCertificate()">
+                    <i class="fas fa-download"></i> Download PDF
+                </button>
+                <button class="share-certificate" onclick="shareCertificate()">
+                    <i class="fas fa-share-alt"></i> Share
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Include Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/awards.js"></script>
+</body>
+</html>

@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketing - Mafu Secondary School</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo-container">
+                <div class="logo">MS</div>
+                <div class="school-name">
+                    <h1>Mafu Secondary School</h1>
+                    <h2>Excellence in Education Since 1995</h2>
+                </div>
+            </div>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav>
+                <ul id="mainMenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="team.html">Our Team</a></li>
+                    <li><a href="announcement.html">Announcements</a></li>
+                    <li><a href="donate.html">Matric Support</a></li>
+                    <li><a href="store.html">School Store</a></li>
+                    <li><a href="marketing.html" class="active">Marketing</a></li>
+                    <li><a href="#" class="login-btn" onclick="openLoginModal()">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Marketing Page Content -->
+    <main class="page-content">
+        <section class="marketing-section">
+            <div class="container">
+                <h1 class="section-title">Marketing & School Promotion</h1>
+                <p style="text-align: center; max-width: 800px; margin: 0 auto 30px;">Discover how Mafu Secondary School stands out as a center of excellence and learn about our admission process.</p>
+                
+                <div class="marketing-highlights">
+                    <div class="marketing-card">
+                        <div class="marketing-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <h3>Why Choose Mafu Secondary?</h3>
+                        <ul>
+                            <li>28 years of academic excellence</li>
+                            <li>92% university placement rate</li>
+                            <li>State-of-the-art facilities</li>
+                            <li>Dedicated and qualified teachers</li>
+                            <li>Holistic student development</li>
+                            <li>Strong community partnerships</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="marketing-card">
+                        <div class="marketing-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3>Academic Programs</h3>
+                        <ul>
+                            <li>Comprehensive Grade 8-12 curriculum</li>
+                            <li>STEM-focused education</li>
+                            <li>Career guidance and counseling</li>
+                            <li>Extra-curricular activities</li>
+                            <li>University preparation programs</li>
+                            <li>Digital literacy integration</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="marketing-card">
+                        <div class="marketing-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3>Student Support</h3>
+                        <ul>
+                            <li>Individual learning support</li>
+                            <li>Career counseling services</li>
+                            <li>Health and wellness programs</li>
+                            <li>Leadership development</li>
+                            <li>Sports and cultural activities</li>
+                            <li>Parent involvement programs</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="admission-process">
+                    <h2 class="section-title">Admission Process</h2>
+                    <div class="process-steps">
+                        <div class="process-step">
+                            <div class="step-number">1</div>
+                            <h3>Application Submission</h3>
+                            <p>Submit completed application form with required documents</p>
+                        </div>
+                        
+                        <div class="process-step">
+                            <div class="step-number">2</div>
+                            <h3>Entrance Assessment</h3>
+                            <p>All applicants complete entrance assessments</p>
+                        </div>
+                        
+                        <div class="process-step">
+                            <div class="step-number">3</div>
+                            <h3>Interview</h3>
+                            <p>Shortlisted candidates and parents attend interview</p>
+                        </div>
+                        
+                        <div class="process-step">
+                            <div class="step-number">4</div>
+                            <h3>Acceptance</h3>
+                            <p>Successful applicants receive acceptance letters</p>
+                        </div>
+                    </div>
+                    
+                    <div class="admission-cta">
+                        <a href="#" class="cta-button" onclick="downloadProspectus()">Download Prospectus</a>
+                        <a href="#" class="cta-button" onclick="openApplicationForm()">Apply Now</a>
+                    </div>
+                </div>
+                
+                <div class="testimonials">
+                    <h2 class="section-title">What Parents & Students Say</h2>
+                    <div class="testimonial-grid">
+                        <div class="testimonial-card">
+                            <div class="testimonial-content">
+                                <p>"Mafu Secondary transformed my child's academic performance. The teachers are dedicated and the facilities are excellent."</p>
+                            </div>
+                            <div class="testimonial-author">
+                                <h4>Mrs. Sarah Johnson</h4>
+                                <p>Parent of Grade 11 student</p>
+                            </div>
+                        </div>
+                        
+                        <div class="testimonial-card">
+                            <div class="testimonial-content">
+                                <p>"The career guidance program helped me get into my dream university. I'm forever grateful to Mafu Secondary."</p>
+                            </div>
+                            <div class="testimonial-author">
+                                <h4>Lerato Mokoena</h4>
+                                <p>Class of 2022, University of Pretoria</p>
+                            </div>
+                        </div>
+                        
+                        <div class="testimonial-card">
+                            <div class="testimonial-content">
+                                <p>"As a teacher, I appreciate the supportive environment and resources available to help students succeed."</p>
+                            </div>
+                            <div class="testimonial-author">
+                                <h4>Mr. David Chauke</h4>
+                                <p>Mathematics HOD, 10 years at Mafu</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-marketing">
+                    <h2 class="section-title">Contact Admissions</h2>
+                    <div class="contact-info">
+                        <p><i class="fas fa-phone"></i> Admissions Office: (012) 345-6790</p>
+                        <p><i class="fas fa-envelope"></i> admissions@mafusecondary.edu</p>
+                        <p><i class="fas fa-clock"></i> Office Hours: Mon-Fri, 8:00 AM - 4:00 PM</p>
+                    </div>
+                    <div class="contact-form">
+                        <h3>Request More Information</h3>
+                        <div class="form-group">
+                            <input type="text" id="infoName" placeholder="Your Name">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="infoEmail" placeholder="Your Email">
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="infoPhone" placeholder="Your Phone Number">
+                        </div>
+                        <div class="form-group">
+                            <textarea id="infoMessage" placeholder="Your Message" rows="3"></textarea>
+                        </div>
+                        <button class="submit-btn" onclick="submitInfoRequest()">Request Information</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Mafu Secondary School</h3>
+                    <p>"Empowering Minds, Building Character, Shaping Futures"</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="team.html">Our Team</a></li>
+                        <li><a href="announcement.html">Announcements</a></li>
+                        <li><a href="donate.html">Matric Support</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contact Info</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Education Street, Mafu City</li>
+                        <li><i class="fas fa-phone"></i> (012) 345-6789</li>
+                        <li><i class="fas fa-envelope"></i> info@mafusecondary.edu</li>
+                        <li><i class="fas fa-clock"></i> Mon-Fri: 7:30 AM - 4:30 PM</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Grades</h3>
+                    <ul>
+                        <li><a href="#">Grade 8</a></li>
+                        <li><a href="#">Grade 9</a></li>
+                        <li><a href="#">Grade 10</a></li>
+                        <li><a href="#">Grade 11</a></li>
+                        <li><a href="#">Grade 12 (Matric)</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 Mafu Secondary School. All Rights Reserved. | Designed with the school colors: Navy Blue, Gold & White</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <button class="close-modal" onclick="closeLoginModal()">&times;</button>
+            <h3 id="modalTitle">Login to Your Account</h3>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="userType">Login As:</label>
+                    <select id="userType" onchange="updateLoginForm()">
+                        <option value="staff">Staff/Principal</option>
+                        <option value="teacher">Teacher</option>
+                        <option value="parent">Parent</option>
+                        <option value="learner">Learner</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email" id="emailLabel">School Email Address</label>
+                    <input type="email" id="email" placeholder="Enter your school email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Enter your password" required>
+                </div>
+                
+                <div class="form-group" id="gradeField" style="display: none;">
+                    <label for="grade">Grade</label>
+                    <select id="grade">
+                        <option value="8">Grade 8</option>
+                        <option value="9">Grade 9</option>
+                        <option value="10">Grade 10</option>
+                        <option value="11">Grade 11</option>
+                        <option value="12">Grade 12</option>
+                    </select>
+                </div>
+                
+                <button type="submit" class="submit-btn">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/auth.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        // Marketing page specific functions
+        function downloadProspectus() {
+            showNotification('Downloading school prospectus...', 'info');
+            // In real implementation, this would download a PDF
+            setTimeout(() => {
+                showNotification('Prospectus download started!', 'success');
+            }, 1000);
+        }
+        
+        function openApplicationForm() {
+            showNotification('Opening application form...', 'info');
+            // In real implementation, this would open application form
+            setTimeout(() => {
+                const userType = localStorage.getItem('mafuUserType');
+                if (userType === 'parent') {
+                    window.location.href = 'application.html';
+                } else {
+                    showNotification('Please login as a parent to access the application form.', 'info');
+                    openLoginModal('parent');
+                }
+            }, 1000);
+        }
+        
+        function submitInfoRequest() {
+            const name = document.getElementById('infoName').value;
+            const email = document.getElementById('infoEmail').value;
+            
+            if (name && email) {
+                showNotification('Information request submitted successfully! We will contact you soon.', 'success');
+                // Clear form
+                document.getElementById('infoName').value = '';
+                document.getElementById('infoEmail').value = '';
+                document.getElementById('infoPhone').value = '';
+                document.getElementById('infoMessage').value = '';
+            } else {
+                showNotification('Please fill in at least your name and email.', 'error');
+            }
+        }
+    </script>
+</body>
+</html>

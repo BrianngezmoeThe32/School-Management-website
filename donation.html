@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matric Support - Mafu Secondary School</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo-container">
+                <div class="logo">MS</div>
+                <div class="school-name">
+                    <h1>Mafu Secondary School</h1>
+                    <h2>Excellence in Education Since 1995</h2>
+                </div>
+            </div>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav>
+                <ul id="mainMenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="team.html">Our Team</a></li>
+                    <li><a href="announcement.html">Announcements</a></li>
+                    <li><a href="marketing.html">Admissions</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">Resources <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-content">
+                            <a href="donation.html" class="active">Matric Support</a>
+                            <a href="store.html">School Store</a>
+                            <a href="#">Learning Materials</a>
+                            <a href="#">Timetables</a>
+                            <a href="#">Grades Portal</a>
+                        </div>
+                    </li>
+                    <li><a href="login.html" class="login-nav-btn">Login <i class="fas fa-sign-in-alt"></i></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Donation Hero Section -->
+    <section class="donation-hero">
+        <div class="container">
+            <div class="donation-hero-content">
+                <h1>Support Our Matric Students</h1>
+                <p class="hero-subtitle">Help Our Grade 12 Learners Achieve Their Dreams</p>
+                <p class="hero-description">Your contribution directly impacts the success of our matric students by providing essential resources for their final year.</p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">92%</div>
+                        <div class="stat-label">2022 Pass Rate</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">85%</div>
+                        <div class="stat-label">University Placement</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">150+</div>
+                        <div class="stat-label">Students Supported</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Donation Content -->
+    <main class="donation-page">
+        <div class="container">
+            <!-- How Donations Help Section -->
+            <section class="donation-impact">
+                <h2 class="section-title">How Your Donation Helps</h2>
+                <div class="impact-grid">
+                    <div class="impact-card">
+                        <div class="impact-icon">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <h3>Study Materials</h3>
+                        <p>Provides textbooks, study guides, and past exam papers for all subjects</p>
+                    </div>
+                    
+                    <div class="impact-card">
+                        <div class="impact-icon">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                        </div>
+                        <h3>Extra Tutoring</h3>
+                        <p>Funds additional tutoring sessions in challenging subjects</p>
+                    </div>
+                    
+                    <div class="impact-card">
+                        <div class="impact-icon">
+                            <i class="fas fa-university"></i>
+                        </div>
+                        <h3>University Applications</h3>
+                        <p>Covers application fees for deserving students</p>
+                    </div>
+                    
+                    <div class="impact-card">
+                        <div class="impact-icon">
+                            <i class="fas fa-laptop"></i>
+                        </div>
+                        <h3>Technology Access</h3>
+                        <p>Provides devices and data for online learning resources</p>
+                    </div>
+                    
+                    <div class="impact-card">
+                        <div class="impact-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h3>Wellness Support</h3>
+                        <p>Funds stress management and mental health programs</p>
+                    </div>
+                    
+                    <div class="impact-card">
+                        <div class="impact-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3>Career Guidance</h3>
+                        <p>Supports workshops and career counseling sessions</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Donation Options -->
+            <section class="donation-options-section">
+                <h2 class="section-title">Make a Difference Today</h2>
+                <p class="section-subtitle">Choose an amount that works for you. Every contribution counts!</p>
+                
+                <div class="donation-tiers">
+                    <div class="donation-tier">
+                        <div class="tier-header">
+                            <h3>Basic Support</h3>
+                            <div class="tier-amount">R 250</div>
+                        </div>
+                        <div class="tier-benefits">
+                            <p><i class="fas fa-check"></i> Study materials for one student</p>
+                            <p><i class="fas fa-check"></i> Your name on our supporters list</p>
+                            <p><i class="fas fa-check"></i> Thank you certificate</p>
+                        </div>
+                        <button class="tier-donate-btn" data-amount="250" onclick="donateNow(250)">Donate Now</button>
+                    </div>
+                    
+                    <div class="donation-tier popular">
+                        <div class="popular-badge">Most Popular</div>
+                        <div class="tier-header">
+                            <h3>Standard Support</h3>
+                            <div class="tier-amount">R 500</div>
+                        </div>
+                        <div class="tier-benefits">
+                            <p><i class="fas fa-check"></i> One month tutoring for a student</p>
+                            <p><i class="fas fa-check"></i> Study materials package</p>
+                            <p><i class="fas fa-check"></i> Personalized thank you letter</p>
+                            <p><i class="fas fa-check"></i> Recognition in school newsletter</p>
+                        </div>
+                        <button class="tier-donate-btn" data-amount="500" onclick="donateNow(500)">Donate Now</button>
+                    </div>
+                    
+                    <div class="donation-tier">
+                        <div class="tier-header">
+                            <h3>Premium Support</h3>
+                            <div class="tier-amount">R 1,000</div>
+                        </div>
+                        <div class="tier-benefits">
+                            <p><i class="fas fa-check"></i> University applications for 2 students</p>
+                            <p><i class="fas fa-check"></i> Complete study package</p>
+                            <p><i class="fas fa-check"></i> Certificate of appreciation</p>
+                            <p><i class="fas fa-check"></i> Invitation to matric function</p>
+                        </div>
+                        <button class="tier-donate-btn" data-amount="1000" onclick="donateNow(1000)">Donate Now</button>
+                    </div>
+                </div>
+                
+                <div class="custom-donation">
+                    <h3>Custom Donation Amount</h3>
+                    <div class="custom-amount-input">
+                        <span class="currency">R</span>
+                        <input type="number" id="customAmount" placeholder="Enter amount" min="50" step="50">
+                        <button class="custom-donate-btn" onclick="donateCustom()">Donate</button>
+                    </div>
+                    <p class="amount-suggestions">
+                        Quick amounts: 
+                        <button class="amount-suggestion" onclick="setCustomAmount(50)">R 50</button>
+                        <button class="amount-suggestion" onclick="setCustomAmount(200)">R 200</button>
+                        <button class="amount-suggestion" onclick="setCustomAmount(750)">R 750</button>
+                        <button class="amount-suggestion" onclick="setCustomAmount(1500)">R 1,500</button>
+                    </p>
+                </div>
+            </section>
+
+            <!-- Success Stories -->
+            <section class="success-stories">
+                <h2 class="section-title">Success Stories</h2>
+                <div class="stories-grid">
+                    <div class="story-card">
+                        <div class="story-content">
+                            <p>"Thanks to the extra tutoring funded by donations, I improved my mathematics from 45% to 78% and got accepted to study Engineering at Wits University."</p>
+                        </div>
+                        <div class="story-author">
+                            <div class="author-avatar">
+                                <i class="fas fa-user-graduate"></i>
+                            </div>
+                            <div class="author-info">
+                                <h4>Thabo Mokoena</h4>
+                                <p>Class of 2022, University of the Witwatersrand</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="story-card">
+                        <div class="story-content">
+                            <p>"The study guides provided through this program were instrumental in my success. I'm now studying Medicine at UCT, a dream I never thought possible."</p>
+                        </div>
+                        <div class="story-author">
+                            <div class="author-avatar">
+                                <i class="fas fa-user-graduate"></i>
+                            </div>
+                            <div class="author-info">
+                                <h4>Lerato Ndlovu</h4>
+                                <p>Class of 2021, University of Cape Town</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="story-card">
+                        <div class="story-content">
+                            <p>"As a parent, I saw the transformation in my daughter. The career guidance helped her choose the right path, and she's now thriving at Stellenbosch University."</p>
+                        </div>
+                        <div class="story-author">
+                            <div class="author-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="author-info">
+                                <h4>Mrs. Sarah Johnson</h4>
+                                <p>Parent of 2022 Graduate</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Donation Progress -->
+            <section class="donation-progress">
+                <h2 class="section-title">2023 Matric Support Fund</h2>
+                <div class="progress-container">
+                    <div class="progress-info">
+                        <div class="progress-stats">
+                            <div class="stat">
+                                <div class="stat-value">R 85,250</div>
+                                <div class="stat-label">Raised</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">R 150,000</div>
+                                <div class="stat-label">Goal</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">128</div>
+                                <div class="stat-label">Donors</div>
+                            </div>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 57%"></div>
+                        </div>
+                        <div class="progress-percentage">57% of goal reached</div>
+                    </div>
+                    
+                    <div class="progress-details">
+                        <h3>What we've achieved so far:</h3>
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> 85% of Grade 12 students received study materials</li>
+                            <li><i class="fas fa-check-circle"></i> Weekly tutoring sessions for all subjects</li>
+                            <li><i class="fas fa-check-circle"></i> University application fees covered for 45 students</li>
+                            <li><i class="fas fa-check-circle"></i> Career workshops conducted monthly</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FAQ Section -->
+            <section class="donation-faq">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            How are donations used?
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>100% of donations go directly to matric support programs. This includes study materials, tutoring, university application fees, and career guidance workshops. Administrative costs are covered separately by the school.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Is my donation tax deductible?
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Yes, Mafu Secondary School is registered as a Public Benefit Organization (PBO). All donations are tax deductible and you will receive a Section 18A certificate for tax purposes.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Can I donate anonymously?
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Yes, you can choose to donate anonymously. During the donation process, simply select the "Anonymous Donation" option.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            How do I get a receipt?
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>An electronic receipt will be sent to your email immediately after your donation is processed. For tax certificates, these are issued quarterly and emailed to you.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <div class="logo">MS</div>
+                        <div>
+                            <h3>Mafu Secondary School</h3>
+                            <p class="slogan">"Empowering Minds, Building Character, Shaping Futures"</p>
+                        </div>
+                    </div>
+                    <p>Providing quality education from Grade 8 to 12 since 1995. Accredited by the Department of Education.</p>
+                    <div class="footer-contact">
+                        <p><i class="fas fa-map-marker-alt"></i> 123 Education Street, Mafu City</p>
+                        <p><i class="fas fa-phone"></i> (012) 345-6789</p>
+                        <p><i class="fas fa-envelope"></i> info@mafusecondary.edu</p>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                        <li><a href="about.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+                        <li><a href="team.html"><i class="fas fa-users"></i> Our Team</a></li>
+                        <li><a href="announcement.html"><i class="fas fa-bullhorn"></i> Announcements</a></li>
+                        <li><a href="marketing.html"><i class="fas fa-graduation-cap"></i> Admissions</a></li>
+                        <li><a href="donation.html"><i class="fas fa-hand-holding-heart"></i> Matric Support</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="store.html"><i class="fas fa-store"></i> School Store</a></li>
+                        <li><a href="login.html"><i class="fas fa-sign-in-alt"></i> Login Portals</a></li>
+                        <li><a href="#"><i class="fas fa-book"></i> Learning Materials</a></li>
+                        <li><a href="#"><i class="fas fa-calendar"></i> Timetables</a></li>
+                        <li><a href="#"><i class="fas fa-chart-line"></i> Grades Portal</a></li>
+                        <li><a href="#"><i class="fas fa-download"></i> Downloads</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Connect With Us</h3>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-icon twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-icon instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-icon youtube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="#" class="social-icon linkedin">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                    
+                    <div class="newsletter">
+                        <h4>Subscribe to Newsletter</h4>
+                        <div class="newsletter-form">
+                            <input type="email" placeholder="Your email address">
+                            <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                        </div>
+                    </div>
+                    
+                    <div class="school-hours">
+                        <h4>School Hours</h4>
+                        <p>Mon-Fri: 7:30 AM - 4:30 PM</p>
+                        <p>Office: 8:00 AM - 4:00 PM</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>&copy; 2023 Mafu Secondary School. All Rights Reserved.</p>
+                    <p>Designed with <i class="fas fa-heart" style="color: #dc3545;"></i> using school colors: Navy Blue, Gold & White</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Sitemap</a>
+                    <a href="#">Accessibility</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Donation Modal -->
+    <div class="modal" id="donationModal">
+        <div class="modal-content donation-modal">
+            <button class="close-modal" onclick="closeDonationModal()">&times;</button>
+            <div class="donation-form-container">
+                <h3>Complete Your Donation</h3>
+                <div class="donation-summary">
+                    <p>Donation Amount: <span id="donationAmountDisplay">R 0</span></p>
+                    <p>Supporting: Matric Academic Support Program</p>
+                </div>
+                
+                <form id="donationForm">
+                    <div class="form-section">
+                        <h4>Personal Information</h4>
+                        <div class="form-group">
+                            <input type="text" id="donorName" placeholder="Full Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="donorEmail" placeholder="Email Address" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="donorPhone" placeholder="Phone Number">
+                        </div>
+                    </div>
+                    
+                    <div class="form-section">
+                        <h4>Donation Details</h4>
+                        <div class="form-group">
+                            <label>
+                                <input type="checkbox" id="anonymousDonation">
+                                Make this donation anonymous
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label>
+                                <input type="checkbox" id="recurringDonation">
+                                Make this a monthly recurring donation
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label for="donationMessage">Optional Message:</label>
+                            <textarea id="donationMessage" placeholder="Add a message of encouragement for our students" rows="3"></textarea>
+                        </div>
+                    </div>
+                    
+                    <div class="form-section">
+                        <h4>Payment Method</h4>
+                        <div class="payment-methods">
+                            <div class="payment-method">
+                                <input type="radio" id="creditCard" name="paymentMethod" value="credit" checked>
+                                <label for="creditCard">
+                                    <i class="fas fa-credit-card"></i> Credit/Debit Card
+                                </label>
+                            </div>
+                            <div class="payment-method">
+                                <input type="radio" id="paypal" name="paymentMethod" value="paypal">
+                                <label for="paypal">
+                                    <i class="fab fa-paypal"></i> PayPal
+                                </label>
+                            </div>
+                            <div class="payment-method">
+                                <input type="radio" id="eft" name="paymentMethod" value="eft">
+                                <label for="eft">
+                                    <i class="fas fa-university"></i> EFT/Bank Transfer
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div id="cardDetails" class="payment-details">
+                            <div class="form-group">
+                                <input type="text" id="cardNumber" placeholder="Card Number" maxlength="19">
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <input type="text" id="cardExpiry" placeholder="MM/YY" maxlength="5">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" id="cardCVC" placeholder="CVC" maxlength="4">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="submit-donation-btn">
+                        <i class="fas fa-lock"></i> Complete Donation
+                    </button>
+                    
+                    <p class="secure-notice">
+                        <i class="fas fa-shield-alt"></i> Your donation is secure and encrypted
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/donation.js"></script>
+</body>
+</html>

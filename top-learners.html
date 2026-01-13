@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Learners - Mafu Secondary School</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/awards.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo-container">
+                <div class="logo">MS</div>
+                <div class="school-name">
+                    <h1>Mafu Secondary School</h1>
+                    <h2>Excellence in Education Since 1995</h2>
+                </div>
+            </div>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav>
+                <ul id="mainMenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="team.html">Our Team</a></li>
+                    <li><a href="announcement.html">Announcements</a></li>
+                    <li><a href="marketing.html">Admissions</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">Resources <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-content">
+                            <a href="donation.html">Matric Support</a>
+                            <a href="store.html">School Store</a>
+                            <a href="top-learners.html" class="active">Top Learners</a>
+                            <a href="#">Learning Materials</a>
+                            <a href="#">Timetables</a>
+                            <a href="#">Grades Portal</a>
+                        </div>
+                    </li>
+                    <li><a href="login.html" class="login-nav-btn">Login <i class="fas fa-sign-in-alt"></i></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Top Learners Hero -->
+    <section class="top-learners-hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Top Learners of the Month</h1>
+                <p class="hero-subtitle">Celebrating Academic Excellence Across All Grades</p>
+                <p class="hero-description">Recognizing the outstanding achievements of our students who demonstrate exceptional dedication to their studies.</p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">50+</div>
+                        <div class="stat-label">Top Learners Monthly</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">5</div>
+                        <div class="stat-label">Grade Levels</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">10</div>
+                        <div class="stat-label">Learners per Grade</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">12</div>
+                        <div class="stat-label">Months Tracked</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="top-learners-page">
+        <div class="container">
+            <!-- Month & Year Selector -->
+            <section class="period-selector">
+                <div class="selector-header">
+                    <h2>Select Academic Period</h2>
+                    <p>View top learners for different months and years</p>
+                </div>
+                <div class="period-controls">
+                    <div class="year-selector">
+                        <button class="year-btn" data-year="2026">2026</button>
+                        <button class="year-btn" data-year="2025">2025</button>
+                        <button class="year-btn" data-year="2024">2024</button>
+                    </div>
+                    <div class="month-selector">
+                        <select id="monthSelect">
+                            <option value="January">January</option>
+                            <option value="February">February</option>
+                            <option value="March">March</option>
+                            <option value="April">April</option>
+                            <option value="May">May</option>
+                            <option value="June">June</option>
+                            <option value="July">July</option>
+                            <option value="August">August</option>
+                            <option value="September">September</option>
+                            <option value="October">October</option>
+                            <option value="November">November</option>
+                            <option value="December">December</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="current-period">
+                    <h3 id="currentPeriod">November 2026</h3>
+                    <div class="period-actions">
+                        <button class="action-btn print" onclick="printTopLearners()">
+                            <i class="fas fa-print"></i> Print Report
+                        </button>
+                        <button class="action-btn download" onclick="downloadData()">
+                            <i class="fas fa-download"></i> Download Data
+                        </button>
+                        <button class="action-btn awards" onclick="generateAwards()">
+                            <i class="fas fa-award"></i> Generate Awards
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Grade Navigation -->
+            <section class="grade-navigation">
+                <h2>Select Grade Level</h2>
+                <div class="grade-tabs">
+                    <button class="grade-tab active" data-grade="8">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>Grade 8</span>
+                    </button>
+                    <button class="grade-tab" data-grade="9">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>Grade 9</span>
+                    </button>
+                    <button class="grade-tab" data-grade="10">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>Grade 10</span>
+                    </button>
+                    <button class="grade-tab" data-grade="11">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>Grade 11</span>
+                    </button>
+                    <button class="grade-tab" data-grade="12">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>Grade 12</span>
+                    </button>
+                </div>
+            </section>
+
+            <!-- Top Learners Display -->
+            <section class="learners-display">
+                <div class="display-header">
+                    <h2 id="gradeTitle">Grade 8 Top 10 Learners</h2>
+                    <div class="display-filters">
+                        <div class="filter-group">
+                            <label for="sortBy">Sort by:</label>
+                            <select id="sortBy">
+                                <option value="average">Average %</option>
+                                <option value="position">Position</option>
+                                <option value="name">Name</option>
+                                <option value="improvement">Improvement</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label for="viewMode">View:</label>
+                            <select id="viewMode">
+                                <option value="table">Table View</option>
+                                <option value="cards">Card View</option>
+                                <option value="charts">Chart View</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Table View -->
+                <div class="table-view" id="tableView">
+                    <div class="table-container">
+                        <table class="learners-table">
+                            <thead>
+                                <tr>
+                                    <th>Position</th>
+                                    <th>Student Name</th>
+                                    <th>Student ID</th>
+                                    <th>Average %</th>
+                                    <th>Improvement</th>
+                                    <th>Best Subject</th>
+                                    <th>Achievements</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="learnersTableBody">
+                                <!-- Data will be loaded by JavaScript -->
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="table-summary">
+                        <div class="summary-item">
+                            <span class="label">Class Average:</span>
+                            <span class="value" id="classAverage">85.4%</span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="label">Top Average:</span>
+                            <span class="value" id="topAverage">96.2%</span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="label">Most Improved:</span>
+                            <span class="value" id="mostImproved">+12.5%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card View -->
+                <div class="card-view" id="cardView" style="display: none;">
+                    <div class="cards-container" id="cardsContainer">
+                        <!-- Cards will be loaded by JavaScript -->
+                    </div>
+                </div>
+
+                <!-- Chart View -->
+                <div class="chart-view" id="chartView" style="display: none;">
+                    <div class="chart-container">
+                        <canvas id="performanceChart"></canvas>
+                    </div>
+                    <div class="chart-controls">
+                        <button class="chart-btn" onclick="changeChartType('bar')">Bar Chart</button>
+                        <button class="chart-btn" onclick="changeChartType('line')">Line Chart</button>
+                        <button class="chart-btn" onclick="changeChartType('radar')">Radar Chart</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Subject Performance -->
+            <section class="subject-performance">
+                <h2>Subject Performance Analysis</h2>
+                <div class="subject-grid" id="subjectGrid">
+                    <!-- Subject data will be loaded by JavaScript -->
+                </div>
+            </section>
+
+            <!-- Previous Months Comparison -->
+            <section class="comparison-section">
+                <h2>Monthly Performance Comparison</h2>
+                <div class="comparison-chart">
+                    <canvas id="comparisonChart"></canvas>
+                </div>
+                <div class="comparison-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Month</th>
+                                <th>Top Average</th>
+                                <th>Class Average</th>
+                                <th># of Distinctions</th>
+                                <th>Improvement</th>
+                            </tr>
+                        </thead>
+                        <tbody id="comparisonTableBody">
+                            <!-- Data will be loaded by JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Award History -->
+            <section class="award-history">
+                <div class="history-header">
+                    <h2>Award History Archive</h2>
+                    <a href="awards-archive.html" class="view-all">
+                        View All Awards <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="history-grid">
+                    <div class="history-card">
+                        <div class="history-year">2026</div>
+                        <div class="history-content">
+                            <h3>Annual Awards 2026</h3>
+                            <p>Top performers recognized in November 2026</p>
+                            <div class="history-stats">
+                                <span><i class="fas fa-users"></i> 50 Awards</span>
+                                <span><i class="fas fa-trophy"></i> 5 Categories</span>
+                            </div>
+                            <a href="awards-2026.html" class="view-awards-btn">View Awards</a>
+                        </div>
+                    </div>
+                    <div class="history-card">
+                        <div class="history-year">2025</div>
+                        <div class="history-content">
+                            <h3>Annual Awards 2025</h3>
+                            <p>Top performers recognized in November 2025</p>
+                            <div class="history-stats">
+                                <span><i class="fas fa-users"></i> 48 Awards</span>
+                                <span><i class="fas fa-trophy"></i> 5 Categories</span>
+                            </div>
+                            <a href="awards-archive.html#2025" class="view-awards-btn">View Awards</a>
+                        </div>
+                    </div>
+                    <div class="history-card">
+                        <div class="history-year">2024</div>
+                        <div class="history-content">
+                            <h3>Annual Awards 2024</h3>
+                            <p>Top performers recognized in November 2024</p>
+                            <div class="history-stats">
+                                <span><i class="fas fa-users"></i> 45 Awards</span>
+                                <span><i class="fas fa-trophy"></i> 5 Categories</span>
+                            </div>
+                            <a href="awards-archive.html#2024" class="view-awards-btn">View Awards</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Recognition Program -->
+            <section class="recognition-program">
+                <h2>Recognition & Rewards Program</h2>
+                <div class="program-info">
+                    <div class="program-card">
+                        <div class="program-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <h3>Monthly Awards</h3>
+                        <ul>
+                            <li>Top 10 per grade recognized monthly</li>
+                            <li>Certificates of Achievement</li>
+                            <li>School newsletter feature</li>
+                            <li>Special privileges</li>
+                        </ul>
+                    </div>
+                    <div class="program-card">
+                        <div class="program-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <h3>Annual Awards</h3>
+                        <ul>
+                            <li>Annual award ceremony in November</li>
+                            <li>Trophies and medals</li>
+                            <li>Merit certificates</li>
+                            <li>Prize money for top 3</li>
+                        </ul>
+                    </div>
+                    <div class="program-card">
+                        <div class="program-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>Performance Tracking</h3>
+                        <ul>
+                            <li>Monthly performance reports</li>
+                            <li>Improvement tracking</li>
+                            <li>Subject-wise analysis</li>
+                            <li>Parent notifications</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <div class="logo">MS</div>
+                        <div>
+                            <h3>Mafu Secondary School</h3>
+                            <p class="slogan">"Empowering Minds, Building Character, Shaping Futures"</p>
+                        </div>
+                    </div>
+                    <p>Providing quality education from Grade 8 to 12 since 1995. Accredited by the Department of Education.</p>
+                    <div class="footer-contact">
+                        <p><i class="fas fa-map-marker-alt"></i> 123 Education Street, Mafu City</p>
+                        <p><i class="fas fa-phone"></i> (012) 345-6789</p>
+                        <p><i class="fas fa-envelope"></i> info@mafusecondary.edu</p>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                        <li><a href="about.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+                        <li><a href="team.html"><i class="fas fa-users"></i> Our Team</a></li>
+                        <li><a href="announcement.html"><i class="fas fa-bullhorn"></i> Announcements</a></li>
+                        <li><a href="marketing.html"><i class="fas fa-graduation-cap"></i> Admissions</a></li>
+                        <li><a href="top-learners.html"><i class="fas fa-trophy"></i> Top Learners</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Academic Resources</h3>
+                    <ul>
+                        <li><a href="top-learners.html"><i class="fas fa-chart-line"></i> Performance Tracking</a></li>
+                        <li><a href="awards-2026.html"><i class="fas fa-award"></i> 2026 Awards</a></li>
+                        <li><a href="awards-archive.html"><i class="fas fa-archive"></i> Awards Archive</a></li>
+                        <li><a href="#"><i class="fas fa-book"></i> Study Materials</a></li>
+                        <li><a href="#"><i class="fas fa-calendar-alt"></i> Exam Schedule</a></li>
+                        <li><a href="#"><i class="fas fa-graduation-cap"></i> Career Guidance</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Connect With Us</h3>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-icon twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-icon instagram">
+                            <i class="fas fa-trophy"></i>
+                        </a>
+                        <a href="#" class="social-icon youtube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="#" class="social-icon linkedin">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                    
+                    <div class="achievement-highlight">
+                        <h4>Achievement Spotlight</h4>
+                        <p><i class="fas fa-star"></i> 92% Matric Pass Rate 2023</p>
+                        <p><i class="fas fa-star"></i> 50+ Top Learners Monthly</p>
+                    </div>
+                    
+                    <div class="school-hours">
+                        <h4>Academic Office Hours</h4>
+                        <p>Mon-Fri: 8:00 AM - 4:00 PM</p>
+                        <p>Awards Ceremony: November Annually</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>&copy; 2023 Mafu Secondary School. All Rights Reserved.</p>
+                    <p>Academic Excellence Tracking System | Version 2.1</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#"><i class="fas fa-shield-alt"></i> Data Privacy</a>
+                    <a href="#"><i class="fas fa-file-alt"></i> Academic Policy</a>
+                    <a href="#"><i class="fas fa-question-circle"></i> FAQ</a>
+                    <a href="#"><i class="fas fa-envelope"></i> Contact Academics</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Print Modal -->
+    <div class="modal" id="printModal">
+        <div class="modal-content print-modal">
+            <button class="close-modal" onclick="closePrintModal()">&times;</button>
+            <h3>Print Top Learners Report</h3>
+            <div class="print-options">
+                <div class="option-group">
+                    <h4>Select Grades:</h4>
+                    <div class="grade-checkboxes">
+                        <label><input type="checkbox" name="printGrade" value="8" checked> Grade 8</label>
+                        <label><input type="checkbox" name="printGrade" value="9" checked> Grade 9</label>
+                        <label><input type="checkbox" name="printGrade" value="10" checked> Grade 10</label>
+                        <label><input type="checkbox" name="printGrade" value="11" checked> Grade 11</label>
+                        <label><input type="checkbox" name="printGrade" value="12" checked> Grade 12</label>
+                    </div>
+                </div>
+                <div class="option-group">
+                    <h4>Report Options:</h4>
+                    <label><input type="checkbox" name="printOptions" value="summary" checked> Include Summary</label>
+                    <label><input type="checkbox" name="printOptions" value="charts" checked> Include Charts</label>
+                    <label><input type="checkbox" name="printOptions" value="details" checked> Include Details</label>
+                    <label><input type="checkbox" name="printOptions" value="comments"> Include Comments</label>
+                </div>
+                <div class="option-group">
+                    <h4>Format:</h4>
+                    <select id="printFormat">
+                        <option value="pdf">PDF Document</option>
+                        <option value="excel">Excel Spreadsheet</option>
+                        <option value="word">Word Document</option>
+                        <option value="html">HTML Report</option>
+                    </select>
+                </div>
+            </div>
+            <div class="print-preview" id="printPreview">
+                <!-- Preview will be generated here -->
+            </div>
+            <div class="print-actions">
+                <button class="print-btn" onclick="generatePrint()">
+                    <i class="fas fa-print"></i> Generate & Print
+                </button>
+                <button class="download-btn" onclick="downloadReport()">
+                    <i class="fas fa-download"></i> Download Report
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Awards Generation Modal -->
+    <div class="modal" id="awardsModal">
+        <div class="modal-content awards-modal">
+            <button class="close-modal" onclick="closeAwardsModal()">&times;</button>
+            <h3>Generate Awards for November 2026</h3>
+            <div class="awards-options">
+                <div class="award-type">
+                    <h4>Award Types:</h4>
+                    <div class="type-checkboxes">
+                        <label><input type="checkbox" name="awardType" value="top10" checked> Top 10 Certificates</label>
+                        <label><input type="checkbox" name="awardType" value="mostImproved"> Most Improved</label>
+                        <label><input type="checkbox" name="awardType" value="subject"> Subject Excellence</label>
+                        <label><input type="checkbox" name="awardType" value="attendance"> Perfect Attendance</label>
+                        <label><input type="checkbox" name="awardType" value="leadership"> Leadership Awards</label>
+                    </div>
+                </div>
+                <div class="award-format">
+                    <h4>Award Format:</h4>
+                    <select id="awardFormat">
+                        <option value="certificate">Digital Certificate</option>
+                        <option value="letter">Award Letter</option>
+                        <option value="card">Award Card</option>
+                        <option value="plaque">Plaque Design</option>
+                    </select>
+                </div>
+                <div class="award-details">
+                    <h4>Additional Details:</h4>
+                    <textarea id="awardMessage" placeholder="Custom message for award recipients..." rows="3"></textarea>
+                    <label>
+                        <input type="checkbox" id="includePrincipal"> Include Principal's Signature
+                    </label>
+                    <label>
+                        <input type="checkbox" id="includeSchoolSeal"> Include School Seal
+                    </label>
+                </div>
+            </div>
+            <div class="awards-preview" id="awardsPreview">
+                <!-- Awards preview will be generated here -->
+            </div>
+            <div class="awards-actions">
+                <button class="generate-btn" onclick="generateAwardsFinal()">
+                    <i class="fas fa-award"></i> Generate Awards
+                </button>
+                <button class="save-btn" onclick="saveAwardsTemplate()">
+                    <i class="fas fa-save"></i> Save Template
+                </button>
+                <button class="print-all-btn" onclick="printAllAwards()">
+                    <i class="fas fa-print"></i> Print All
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Include Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/top-learners.js"></script>
+</body>
+</html>
