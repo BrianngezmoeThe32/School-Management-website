@@ -1,5 +1,5 @@
 /* Top Learners Page Styles */
-.top-learners-hero {
+.top-learners-hero, .learning-materials-hero {
     background: linear-gradient(rgba(0, 31, 63, 0.9), rgba(0, 31, 63, 0.95)), url('https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
     background-size: cover;
     background-position: center;
@@ -8,7 +8,7 @@
     text-align: center;
 }
 
-.top-learners-hero h1 {
+.top-learners-hero h1, .learning-materials-hero h1{
     font-size: 48px;
     margin-bottom: 15px;
     color: var(--gold);
@@ -260,6 +260,10 @@
     overflow-x: auto;
     border-radius: 8px;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.learning-materials-TableView{
+    margin-bottom: 30px;
 }
 
 .learners-table {

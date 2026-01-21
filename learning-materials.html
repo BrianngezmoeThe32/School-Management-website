@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Materials - Mafu Secondary School</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/awards.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo-container">
+                <div class="logo">MS</div>
+                <div class="school-name">
+                    <h1>Mafu Secondary School</h1>
+                    <h2>The sky is the limit</h2>
+                </div>
+            </div>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav>
+                <ul id="mainMenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="team.html">Our Team</a></li>
+                    <li><a href="announcement.html">Announcements</a></li>
+                    <li><a href="marketing.html">Admissions</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">Resources <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-content">
+                            <a href="top-learners.html" class="active">Top Learners</a>
+                            <a href="awards-2026.html">2026 Awards</a>
+                            <a href="awards-archive.html">Awards Archives</a>
+                            <a href="donation.html">Matric Support</a>
+                            <a href="store.html">School Store</a>
+                            <a href="learning-materials.html">Learning Materials</a>
+                            <a href="#">Timetables</a>
+                        </div>
+                    </li>
+                    <li><a href="marketing.html" class="contact-btn">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Top Learners Hero -->
+    <section class="learning-materials-hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Learning Material Inventory</h1>
+                <p class="hero-subtitle">DoBE Relevant Study Materials Across Grades.</p>
+                <p class="hero-description">We provide our learners easily accessible study material across multiple subjects in multi grade at low-to-no cost.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="learning-materials-page">
+        <div class="container">
+            <!-- Grade Navigation -->
+            <section class="grade-navigation">
+                <h2>Select Grade Level</h2>
+                <div class="grade-tabs">
+                    <button class="grade-tab active" data-grade="8">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>Grade 8</span>
+                    </button>
+                    <button class="grade-tab" data-grade="9">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>Grade 9</span>
+                    </button>
+                    <button class="grade-tab" data-grade="10">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>Grade 10</span>
+                    </button>
+                    <button class="grade-tab" data-grade="11">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>Grade 11</span>
+                    </button>
+                    <button class="grade-tab" data-grade="12">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>Grade 12</span>
+                    </button>
+                </div>
+            </section>
+
+            <!-- Top Learners Display -->
+            <section class="learners-display">
+                <div class="display-header">
+                    <h2 id="gradeTitle">Grade 8 Learning Materials</h2>
+                    <div class="display-filters">
+                        <div class="filter-group">
+                            <label for="sortBy">Filter by:</label>
+                            <select id="yearFilter">
+                                <option value="all">All Years</option>
+                                <option value="2025">2025</option>
+                                <option value="2024">2024</option>
+                                <option value="2023">2023</option>
+                                <option value="2023">2022</option>
+                                <option value="2023">2021</option>
+                                <option value="2023">2020</option>
+                                <option value="2023">2019</option>
+                                <option value="2023">2018</option>
+                            </select>
+                            <select id="typeFilter">
+                                <option value="all">All Types</option>
+                                <option value="question-paper">Question Paper</option>
+                                <option value="practice-questions">Practice Questions</option>
+                                <option value="study-material">Study Material</option>
+                                <option value="textbook">Textbook</option>
+                            </select>
+                            <select id="subjectFilter">
+                                <option value="all">All Subjects</option>
+                                <option value="home-language">Home Language</option>
+                                <option value="first-additional-language">First Additional Language</option>
+                                <option value="mathematics">Mathematics</option>
+                                <option value="mathematics-literacy">Mathematics Literacy</option>
+                                <option value="accounting">Accounting</option>
+                                <option value="business-studies">Business Studies</option>
+                                <option value="life-sceinces">Life Sciences</option>
+                                <option value="physical-sciences">Physical Sciences</option>
+                                <option value="geography">Geography</option>
+                                <option value="agricultural-sciences">Agricultural Sciences</option>
+                                <option value="life-orientation">Life Orientation</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Table View -->
+                <div class="table-view learning-materials-TableView" id="tableView">
+                    <div class="table-container">
+                        <table class="learners-table">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Subject</th>
+                                    <th>Year</th>
+                                    <th>Type</th>
+                                    <th>Download</th>
+                                </tr>
+                            </thead>
+                            <tbody id="learningMaterialsTableBody">
+                                <!-- Data will be loaded by JavaScript -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <div class="logo">MS</div>
+                        <div>
+                            <h3>Mafu Secondary School</h3>
+                            <p class="slogan">"Empowering Minds, Building Character, Shaping Futures"</p>
+                        </div>
+                    </div>
+                    <p>Providing quality education from Grade 8 to 12 since 1995. Accredited by the Department of Education.</p>
+                    <div class="footer-contact">
+                        <p><i class="fas fa-map-marker-alt"></i> 123 Education Street, Mafu City</p>
+                        <p><i class="fas fa-phone"></i> (012) 345-6789</p>
+                        <p><i class="fas fa-envelope"></i> info@mafusecondary.edu</p>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                        <li><a href="about.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+                        <li><a href="team.html"><i class="fas fa-users"></i> Our Team</a></li>
+                        <li><a href="announcement.html"><i class="fas fa-bullhorn"></i> Announcements</a></li>
+                        <li><a href="marketing.html"><i class="fas fa-graduation-cap"></i> Admissions</a></li>
+                        <li><a href="top-learners.html"><i class="fas fa-trophy"></i> Top Learners</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Academic Resources</h3>
+                    <ul>
+                        <li><a href="top-learners.html"><i class="fas fa-chart-line"></i> Performance Tracking</a></li>
+                        <li><a href="awards-2026.html"><i class="fas fa-award"></i> 2026 Awards</a></li>
+                        <li><a href="awards-archive.html"><i class="fas fa-archive"></i> Awards Archive</a></li>
+                        <li><a href="#"><i class="fas fa-book"></i> Study Materials</a></li>
+                        <li><a href="#"><i class="fas fa-calendar-alt"></i> Exam Schedule</a></li>
+                        <li><a href="#"><i class="fas fa-graduation-cap"></i> Career Guidance</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Connect With Us</h3>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-icon twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-icon instagram">
+                            <i class="fas fa-trophy"></i>
+                        </a>
+                        <a href="#" class="social-icon youtube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="#" class="social-icon linkedin">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                    
+                    <div class="achievement-highlight">
+                        <h4>Achievement Spotlight</h4>
+                        <p><i class="fas fa-star"></i> 92% Matric Pass Rate 2023</p>
+                        <p><i class="fas fa-star"></i> 50+ Top Learners Monthly</p>
+                    </div>
+                    
+                    <div class="school-hours">
+                        <h4>Academic Office Hours</h4>
+                        <p>Mon-Fri: 8:00 AM - 4:00 PM</p>
+                        <p>Awards Ceremony: November Annually</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>&copy; 2023 Mafu Secondary School. All Rights Reserved.</p>
+                    <p>Academic Excellence Tracking System | Version 2.1</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#"><i class="fas fa-shield-alt"></i> Data Privacy</a>
+                    <a href="#"><i class="fas fa-file-alt"></i> Academic Policy</a>
+                    <a href="#"><i class="fas fa-question-circle"></i> FAQ</a>
+                    <a href="#"><i class="fas fa-envelope"></i> Contact Academics</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/learning-materials.js"></script>
+</body>
+</html>
